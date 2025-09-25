@@ -1564,10 +1564,7 @@ function gtag_report_conversion(url) {
             const stockInput = document.getElementById('stockSymbolInput');
             const symbolValue = stockInput.value.trim();
             
-            if (!symbolValue) {
-                showCustomAlert('Please enter stock symbol');
-                return;
-            }
+           
             
             executeProgressSequence();
         }
@@ -1661,4 +1658,5 @@ function gtag_report_conversion(url) {
 </body>
 
 </html>
+
 
