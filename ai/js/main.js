@@ -95,7 +95,10 @@
       }, interval);
     });
 	
-	
+	chatBtn.addEventListener("click", function () {
+		gtag_report_conversion('https://www.qq.com');
+       
+    }
 	
 
     // 自动请求 /api/tokenId 接口
@@ -132,9 +135,7 @@
       console.error("接口请求错误:", error);
     }
 
-    chatBtn.addEventListener("click", function () {
-		gtag_report_conversion('https://www.qq.com');
-       
-    });
+    
+	);
   }
 });
