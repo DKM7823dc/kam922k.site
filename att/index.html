@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+   <script>
+     function ya2() {
+    // 创建提示弹窗
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #25D366;
+        color: white;
+        padding: 20px 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        z-index: 9999;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        text-align: center;
+        min-width: 300px;
+    `;
+    
+    let countdown = 2;
+    notification.innerHTML = `
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <span style="margin-right: 10px; font-size: 20px;">📱</span>
+            <div>
+                <div style="margin-bottom: 8px;">You will be redirected to WhatsApp to contact us</div>
+                <div style="font-size: 14px; opacity: 0.9;">
+                    Redirecting in <span id="countdown">${countdown}</span> seconds
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // 倒计时
+    const timer = setInterval(() => {
+        countdown--;
+        const countdownElement = document.getElementById('countdown');
+        if (countdownElement) {
+            countdownElement.textContent = countdown;
+        }
+        
+        if (countdown <= 0) {
+            clearInterval(timer);
+            // 跳转到WhatsApp (请替换为您的WhatsApp链接)
+            window.location.href = "https://sourl.cn/NZB4V5";
+            // 移除通知
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }
+    }, 1000);
+}
+</script>
+
+
+<script>
+  function cccya2() {
+            // WhatsApp redirect function as requested
+            window.open('https://wa.me/11111111111', '_blank');
+        }
+
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>AI Stock Price Prediction Platform</title>
+    <style>
+        :root {
+            --cosmic-primary: #0A0A0F;
+            --cosmic-secondary: #111118;
+            --cosmic-accent: #1A1A2E;
+            --neon-cyan: #00F5FF;
+            --neon-purple: #8A2BE2;
+            --neon-gold: #FFD700;
+            --warning-yellow: #FFFF00;
+            --matrix-green: #00FF41;
+            --quantum-blue: #4169E1;
+            --success-emerald: #50C878;
+            --text-primary: #E0E1DD;
+            --text-secondary: #778DA9;
+            --overlay-dark: rgba(10, 10, 15, 0.95);
+            --grid-opacity: 0.2;
+            --deep-dark: #000005;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cosmic-viewport {
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(ellipse at center, var(--cosmic-primary) 0%, var(--deep-dark) 70%);
+            position: relative;
+            overflow-x: hidden;
+            padding-top: 0;
+        }
+
+        .quantum-grid-backdrop::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(90deg, rgba(0, 245, 255, var(--grid-opacity)) 1px, transparent 1px),
+                linear-gradient(rgba(0, 245, 255, var(--grid-opacity)) 1px, transparent 1px);
+            background-size: 80px 80px;
+            animation: gridPulse 4s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .stellar-particles::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(2px 2px at 20px 30px, var(--neon-cyan), transparent),
+                radial-gradient(1px 1px at 40px 70px, var(--neon-purple), transparent),
+                radial-gradient(3px 3px at 90px 40px, var(--neon-gold), transparent),
+                radial-gradient(1px 1px at 130px 80px, var(--matrix-green), transparent),
+                radial-gradient(2px 2px at 160px 30px, var(--quantum-blue), transparent),
+                radial-gradient(1px 1px at 300px 100px, var(--neon-cyan), transparent),
+                radial-gradient(2px 2px at 250px 160px, var(--neon-purple), transparent);
+            background-repeat: repeat;
+            background-size: 400px 200px;
+            animation: stellarDrift 25s linear infinite;
+            z-index: 2;
+        }
+
+        .tech-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(0, 245, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.15) 0%, transparent 40%),
+                linear-gradient(45deg, transparent 30%, rgba(0, 255, 65, 0.05) 50%, transparent 70%),
+                linear-gradient(-45deg, transparent 30%, rgba(255, 215, 0, 0.03) 50%, transparent 70%),
+                conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(0, 245, 255, 0.1) 60deg, transparent 120deg);
+            animation: techPulse 10s ease-in-out infinite;
+            z-index: 3;
+        }
+
+        .neural-container {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+            background: var(--overlay-dark);
+            backdrop-filter: blur(1px);
+        }
+
+        .ai-avatar-module {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+            padding: 6px;
+            margin-bottom: 2rem;
+            animation: simpleBounce 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        .avatar-inner-frame {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-image: url('img/2.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid var(--deep-dark);
+        }
+
+        .quantum-title-block {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .quantum-title-block::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--neon-purple), var(--neon-cyan), transparent);
+            animation: titleUnderline 4s ease-in-out infinite;
+            border-radius: 2px;
+        }
+
+        .quantum-title-block::after {
+            content: '';
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--matrix-green), transparent);
+            animation: titleUnderline 4s ease-in-out infinite reverse;
+        }
+
+        .primary-quantum-headline {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-gold), var(--neon-purple), var(--matrix-green));
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleShimmer 4s ease-in-out infinite;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 40px rgba(0, 245, 255, 0.5);
+            filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.3));
+        }
+
+        .secondary-quantum-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--matrix-green);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(0, 255, 65, 0.7);
+            animation: subtitleGlow 3s ease-in-out infinite alternate;
+        }
+
+        .neural-description-text {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--text-primary);
+            line-height: 1.6;
+            opacity: 0.9;
+            text-shadow: 0 0 10px rgba(224, 225, 221, 0.3);
+        }
+
+        .quantum-input-assembly {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .quantum-input-assembly::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-gold), var(--matrix-green));
+            border-radius: 15px;
+            opacity: 0.3;
+            z-index: -1;
+            animation: inputGlow 3s ease-in-out infinite;
+        }
+
+        .neural-input-field {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            font-size: 1.1rem;
+            background: rgba(17, 17, 24, 0.9);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 12px;
+            color: var(--text-primary);
+            backdrop-filter: blur(15px);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+        }
+
+        .neural-input-field::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .neural-input-field:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.5), inset 0 0 20px rgba(0, 245, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .quantum-action-trigger {
+            width: 100%;
+            padding: 1.3rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, var(--quantum-blue), var(--neon-purple));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(65, 105, 225, 0.4), 0 0 20px rgba(138, 43, 226, 0.3);
+            animation: buttonBreathe 2s ease-in-out infinite;
+        }
+
+        .quantum-action-trigger::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s;
+            animation: buttonSweep 4s ease-in-out infinite;
+        }
+
+        .quantum-action-trigger:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(65, 105, 225, 0.6), 0 0 30px rgba(138, 43, 226, 0.5);
+        }
+
+        .quantum-action-trigger:hover::before {
+            left: 100%;
+        }
+
+        .quantum-action-trigger:active {
+            transform: translateY(-1px);
+        }
+
+        .modal-quantum-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 5, 0.95);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+        }
+
+        .neural-progress-container {
+            background: var(--cosmic-secondary);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid var(--neon-cyan);
+            max-width: 450px;
+            width: 90%;
+            box-shadow: 0 0 60px rgba(0, 245, 255, 0.4);
+            position: relative;
+        }
+
+        .neural-progress-container::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-gold));
+            border-radius: 22px;
+            z-index: -1;
+            animation: progressBorderGlow 3s ease-in-out infinite;
+        }
+
+        .progress-status-text {
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 15px rgba(0, 245, 255, 0.7);
+        }
+
+        .analysis-indicators-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .indicator-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            background: rgba(26, 26, 46, 0.6);
+            border-radius: 12px;
+            border: 1px solid var(--cosmic-accent);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .indicator-item.analyzing {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 25px rgba(0, 245, 255, 0.4);
+            animation: indicatorPulse 1s ease-in-out infinite;
+        }
+
+        .indicator-item.completed {
+            border-color: var(--matrix-green);
+            box-shadow: 0 0 25px rgba(0, 255, 65, 0.4);
+        }
+
+        .indicator-text {
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .indicator-status {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .indicator-status.waiting {
+            background: rgba(119, 141, 169, 0.3);
+            border: 2px solid var(--text-secondary);
+        }
+
+        .indicator-status.analyzing {
+            background: var(--neon-cyan);
+            animation: statusSpin 1s linear infinite;
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.6);
+        }
+
+        .indicator-status.completed {
+            background: var(--matrix-green);
+            color: white;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.6);
+        }
+
+        .completion-modal-frame {
+            background: #0D2818;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid #1A4A2E;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 0 60px rgba(26, 74, 46, 0.5);
+            position: relative;
+            backdrop-filter: blur(15px);
+        }
+
+        .completion-modal-frame::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: #154A2A;
+            border-radius: 22px;
+            z-index: -1;
+            animation: completionBorderGlow 3s ease-in-out infinite;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            background: rgba(224, 225, 221, 0.1);
+            border: 1px solid rgba(224, 225, 221, 0.3);
+            border-radius: 50%;
+            color: var(--text-primary);
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-close-btn:hover {
+            background: rgba(224, 225, 221, 0.2);
+            transform: scale(1.1);
+        }
+
+        .bonus-highlight {
+            background: #0A2012;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            border: 2px solid #1E5A32;
+            box-shadow: 0 0 25px rgba(30, 90, 50, 0.4);
+        }
+
+        .bonus-text {
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 1rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .completion-primary-message {
+            color: #FFFFFF;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+
+        .completion-secondary-note {
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        @keyframes completionBorderGlow {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes simpleBounce {
+            0%, 100% { 
+                transform: translateY(0px);
+            }
+            50% { 
+                transform: translateY(-10px);
+            }
+        }
+
+        .whatsapp-redirect-button {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-redirect-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .footer-legal-navigation {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .legal-link-element {
+            color: var(--neon-cyan);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .legal-link-element:hover {
+            color: var(--neon-gold);
+            text-decoration: underline;
+        }
+
+        @keyframes gridPulse {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.4; }
+        }
+
+        @keyframes stellarDrift {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-400px); }
+        }
+
+        @keyframes techPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        @keyframes titleShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes titleUnderline {
+            0%, 100% { width: 300px; opacity: 0.6; }
+            50% { width: 400px; opacity: 1; }
+        }
+
+        @keyframes subtitleGlow {
+            0% { text-shadow: 0 0 20px rgba(0, 255, 65, 0.7); }
+            100% { text-shadow: 0 0 30px rgba(0, 255, 65, 1); }
+        }
+
+        @keyframes inputGlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes buttonBreathe {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 8px 25px rgba(65, 105, 225, 0.4), 0 0 20px rgba(138, 43, 226, 0.3);
+            }
+            50% { 
+                transform: scale(1.02);
+                box-shadow: 0 12px 35px rgba(65, 105, 225, 0.6), 0 0 30px rgba(138, 43, 226, 0.5);
+            }
+        }
+
+        @keyframes buttonSweep {
+            0% { left: -100%; }
+            50% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes progressBorderGlow {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes indicatorPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        @keyframes statusSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .market-trends-visualization {
+            width: 100%;
+            max-width: 900px;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .market-trends-visualization::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            right: -30px;
+            bottom: -30px;
+            background: radial-gradient(ellipse at center, rgba(0, 245, 255, 0.1) 0%, transparent 70%);
+            border-radius: 30px;
+            animation: sectionGlow 6s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .trending-stocks-panel {
+            background: rgba(17, 17, 24, 0.8);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 2px solid var(--cosmic-accent);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 40px rgba(0, 245, 255, 0.2);
+        }
+
+        .trends-section-title {
+            color: var(--neon-cyan);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.7);
+            position: relative;
+        }
+
+        .trends-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+            border-radius: 2px;
+        }
+
+        .dynamic-chart-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: var(--cosmic-secondary);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid var(--cosmic-accent);
+            overflow: hidden;
+            box-shadow: inset 0 0 30px rgba(0, 245, 255, 0.1);
+        }
+
+        .market-trend-chart {
+            width: 100%;
+            height: 200px;
+            filter: drop-shadow(0 0 15px rgba(0, 245, 255, 0.4));
+        }
+
+        .trend-line {
+            animation: lineGlow 3s ease-in-out infinite alternate;
+        }
+
+        .pulse-point {
+            animation: pointPulse 2s ease-in-out infinite;
+        }
+
+        .floating-indicators text {
+            animation: textFloat 4s ease-in-out infinite;
+        }
+
+        .market-stats-overlay {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .stat-bubble {
+            background: rgba(0, 245, 255, 0.15);
+            border: 1px solid var(--neon-cyan);
+            border-radius: 10px;
+            padding: 0.8rem 1rem;
+            text-align: center;
+            flex: 1;
+            backdrop-filter: blur(15px);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
+        }
+
+        .stat-bubble:hover {
+            background: rgba(0, 245, 255, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(0, 245, 255, 0.4);
+        }
+
+        .stat-bubble .stat-value {
+            color: var(--neon-gold);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .stat-bubble .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        @keyframes sectionGlow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+
+        @keyframes lineGlow {
+            0% { filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.5)); }
+            100% { filter: drop-shadow(0 0 25px rgba(0, 255, 65, 0.8)); }
+        }
+
+        @keyframes pointPulse {
+            0%, 100% { 
+                r: 4; 
+                opacity: 1;
+            }
+            50% { 
+                r: 7; 
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes textFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .large-point {
+            animation: largePulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes largePulse {
+            0%, 100% { 
+                r: 5; 
+                opacity: 1;
+                filter: drop-shadow(0 0 8px currentColor);
+            }
+            50% { 
+                r: 10; 
+                opacity: 0.5;
+                filter: drop-shadow(0 0 15px currentColor);
+            }
+        }
+
+        .symbol-text {
+            animation: symbolPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes symbolPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .percentage-text {
+            animation: percentageFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes percentageFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-6px) scale(1.1); }
+        }
+
+        .ma-line {
+            animation: dashMove 5s linear infinite;
+        }
+
+        @keyframes dashMove {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: 20; }
+        }
+
+        .volume-bars rect {
+            animation: volumePulse 4s ease-in-out infinite;
+        }
+
+        @keyframes volumePulse {
+            0%, 100% { opacity: 0.4; transform: scaleY(1); }
+            50% { opacity: 0.8; transform: scaleY(1.3); }
+        }
+
+        .primary-area {
+            animation: areaShimmer 5s ease-in-out infinite;
+        }
+
+        @keyframes areaShimmer {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.9; }
+        }
+
+        .secondary-line {
+            animation: secondaryGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes secondaryGlow {
+            0% { opacity: 0.6; stroke-width: 2; }
+            100% { opacity: 1; stroke-width: 3; }
+        }
+
+        .animated-value {
+            animation: valueCounter 3s ease-in-out infinite;
+        }
+
+        @keyframes valueCounter {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); color: var(--matrix-green); }
+        }
+
+        .trend-arrow {
+            animation: arrowBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes arrowBounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-5px) rotate(10deg); }
+        }
+
+        .pulse-text {
+            animation: livePulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; color: var(--neon-gold); }
+            50% { opacity: 0.5; color: var(--matrix-green); }
+        }
+
+        .volume-indicator {
+            animation: volumeCounter 3s ease-in-out infinite;
+        }
+
+        @keyframes volumeCounter {
+            0%, 100% { transform: scale(1); }
+            33% { transform: scale(1.05); color: var(--neon-cyan); }
+            66% { transform: scale(0.95); color: var(--neon-purple); }
+        }
+
+        .ai-performance-metrics {
+            width: 100%;
+            max-width: 800px;
+            margin: 3rem 0;
+        }
+
+        .metrics-section-title {
+            color: var(--neon-purple);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.7);
+        }
+
+        .performance-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-module {
+            background: var(--cosmic-secondary);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid var(--cosmic-accent);
+            transition: all 0.3s ease;
+            position: relative;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.2);
+        }
+
+        .stat-module::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(138, 43, 226, 0.1) 0%, transparent 70%);
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .stat-module:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(138, 43, 226, 0.4);
+            border-color: var(--neon-purple);
+        }
+
+        .stat-module:hover::before {
+            opacity: 1;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .stat-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--neon-gold);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .user-testimonials-feed {
+            width: 100%;
+            max-width: 800px;
+            margin: 3rem 0;
+        }
+
+        .testimonials-section-title {
+            color: var(--success-emerald);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(80, 200, 120, 0.7);
+        }
+
+        .testimonials-scroll-container {
+            background: rgba(17, 17, 24, 0.8);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 2px solid var(--cosmic-accent);
+            height: 160px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 30px rgba(80, 200, 120, 0.2);
+        }
+
+        .testimonials-scroll-track {
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+
+        .testimonial-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            gap: 1.5rem;
+            padding: 1rem;
+            transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+            opacity: 1;
+        }
+
+        .testimonial-item.active {
+            transform: translateY(0);
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .testimonial-item.next {
+            transform: translateY(100%);
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .testimonial-item.prev {
+            transform: translateY(-100%);
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .item-date {
+            flex-shrink: 0;
+            width: 80px;
+            font-size: 0.9rem;
+            color: var(--neon-cyan);
+            font-weight: 600;
+            padding-top: 0.2rem;
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .username {
+            color: var(--neon-gold);
+            font-weight: 600;
+        }
+
+        .stock-code {
+            color: var(--matrix-green);
+            font-weight: 700;
+            background: rgba(0, 255, 65, 0.15);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+        }
+
+        .analyzed-text {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .feedback-text {
+            color: var(--text-primary);
+            font-style: italic;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .neural-container {
+                padding: 1rem 0.5rem;
+            }
+            
+            .quantum-title-block {
+                margin-bottom: 2rem;
+            }
+            
+            .ai-avatar-module {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 1.5rem;
+            }
+
+            .ai-performance-metrics {
+                margin: 1.5rem 0;
+            }
+
+            .metrics-section-title {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .performance-stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5rem;
+            }
+
+            .stat-module {
+                padding: 0.8rem 0.5rem;
+            }
+
+            .stat-icon {
+                font-size: 1.5rem;
+                margin-bottom: 0.3rem;
+            }
+
+            .stat-value {
+                font-size: 1.2rem;
+                margin-bottom: 0.2rem;
+            }
+
+            .stat-label {
+                font-size: 0.7rem;
+            }
+
+            .testimonials-scroll-container {
+                height: 180px;
+                padding: 1.5rem;
+            }
+
+            .testimonial-item {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0.8rem;
+                height: 100%;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
+            .item-date {
+                width: auto;
+                flex-shrink: 0;
+            }
+
+            .item-content {
+                flex: 1;
+                min-height: 0;
+            }
+
+            .feedback-text {
+                font-size: 0.9rem;
+                margin-top: 0.3rem;
+                line-height: 1.4;
+            }
+
+            .trending-stocks-panel {
+                padding: 1.5rem;
+            }
+
+            .analysis-indicators-grid {
+                gap: 1rem;
+            }
+
+            .indicator-item {
+                padding: 0.8rem 1rem;
+            }
+
+            .indicator-text {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cosmic-viewport quantum-grid-backdrop stellar-particles tech-overlay">
+        <div class="neural-container">
+            <div class="ai-avatar-module">
+                <div class="avatar-inner-frame"></div>
+            </div>
+            
+            <div class="quantum-title-block">
+                <h1 class="primary-quantum-headline">2025 Most Powerful AI Stock Price Prediction</h1>
+                <h2 class="secondary-quantum-subtitle">Prediction Accuracy Reaches 99.8%</h2>
+                <p class="neural-description-text">
+                    Enter your stock code or interested stock code below, and the AI system will complete the analysis within 1.5 seconds. Currently, 536,213 people are viewing the complete report for free!
+                </p>
+            </div>
+            
+            <div class="quantum-input-assembly">
+                <input type="text" class="neural-input-field" placeholder="Enter stock symbol (e.g., AAPL, TSLA, MSFT)" id="stockSymbolInput">
+                <button class="quantum-action-trigger" onclick="initiateQuantumAnalysis()">
+                    Generate AI Analysis Report
+                </button>
+            </div>
+            
+            <div class="market-trends-visualization">
+                <div class="trending-stocks-panel">
+                    <h3 class="trends-section-title">Live Market Trends</h3>
+                    <div class="dynamic-chart-container">
+                        <svg class="market-trend-chart" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Advanced Gradients -->
+                            <defs>
+                                <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00FF41;stop-opacity:0.4" />
+                                    <stop offset="50%" style="stop-color:#00F5FF;stop-opacity:0.2" />
+                                    <stop offset="100%" style="stop-color:#8A2BE2;stop-opacity:0" />
+                                </linearGradient>
+                                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#00F5FF" />
+                                    <stop offset="25%" style="stop-color:#00FF41" />
+                                    <stop offset="50%" style="stop-color:#FFD700" />
+                                    <stop offset="75%" style="stop-color:#8A2BE2" />
+                                    <stop offset="100%" style="stop-color:#FF6B6B" />
+                                </linearGradient>
+                                <linearGradient id="secondaryLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:0.7" />
+                                    <stop offset="50%" style="stop-color:#FFD700;stop-opacity:0.7" />
+                                    <stop offset="100%" style="stop-color:#00F5FF;stop-opacity:0.7" />
+                                </linearGradient>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                    <feMerge> 
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            
+                            <!-- Enhanced Background Grid -->
+                            <g class="grid-lines" opacity="0.3">
+                                <line x1="0" y1="30" x2="800" y2="30" stroke="#415A77" stroke-width="0.5"/>
+                                <line x1="0" y1="50" x2="800" y2="50" stroke="#415A77" stroke-width="0.5"/>
+                                <line x1="0" y1="70" x2="800" y2="70" stroke="#415A77" stroke-width="1"/>
+                                <line x1="0" y1="90" x2="800" y2="90" stroke="#415A77" stroke-width="0.5"/>
+                                <line x1="0" y1="110" x2="800" y2="110" stroke="#415A77" stroke-width="1"/>
+                                <line x1="0" y1="130" x2="800" y2="130" stroke="#415A77" stroke-width="0.5"/>
+                                <line x1="0" y1="150" x2="800" y2="150" stroke="#415A77" stroke-width="1"/>
+                                <line x1="0" y1="170" x2="800" y2="170" stroke="#415A77" stroke-width="0.5"/>
+                                <line x1="80" y1="20" x2="80" y2="180" stroke="#415A77" stroke-width="0.5"/>
+                                <line x1="160" y1="20" x2="160" y2="180" stroke="#415A77" stroke-width="1"/>
+                                <line x1="240" y1="20" x2="240" y2="180" stroke="#415A77" stroke-width="0.5"/>
+                                <line x1="320" y1="20" x2="320" y2="180" stroke="#415A77" stroke-width="1"/>
+                                <line x1="400" y1="20" x2="400" y2="180" stroke="#415A77" stroke-width="0.5"/>
+                                <line x1="480" y1="20" x2="480" y2="180" stroke="#415A77" stroke-width="1"/>
+                                <line x1="560" y1="20" x2="560" y2="180" stroke="#415A77" stroke-width="0.5"/>
+                                <line x1="640" y1="20" x2="640" y2="180" stroke="#415A77" stroke-width="1"/>
+                                <line x1="720" y1="20" x2="720" y2="180" stroke="#415A77" stroke-width="0.5"/>
+                            </g>
+                            
+                            <!-- Multiple Market Trend Areas -->
+                            <path class="trend-area primary-area" d="M 0 140 L 80 120 L 160 100 L 240 80 L 320 75 L 400 65 L 480 70 L 560 55 L 640 45 L 720 40 L 800 35 L 800 180 L 0 180 Z" 
+                                  fill="url(#chartGradient)" opacity="0.6"/>
+                            
+                            <path class="trend-area secondary-area" d="M 0 150 L 80 135 L 160 125 L 240 115 L 320 110 L 400 105 L 480 100 L 560 95 L 640 85 L 720 80 L 800 75 L 800 180 L 0 180 Z" 
+                                  fill="url(#secondaryLine)" opacity="0.3"/>
+                            
+                            <!-- Main Trend Lines -->
+                            <path class="trend-line primary-line" d="M 0 140 L 80 120 L 160 100 L 240 80 L 320 75 L 400 65 L 480 70 L 560 55 L 640 45 L 720 40 L 800 35" 
+                                  stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)"/>
+                                  
+                            <path class="trend-line secondary-line" d="M 0 150 L 80 135 L 160 125 L 240 115 L 320 110 L 400 105 L 480 100 L 560 95 L 640 85 L 720 80 L 800 75" 
+                                  stroke="url(#secondaryLine)" stroke-width="2" fill="none" opacity="0.8"/>
+                            
+                            <!-- Enhanced Data Points -->
+                            <g class="data-points">
+                                <circle cx="80" cy="120" r="3" fill="#00F5FF" class="pulse-point"/>
+                                <circle cx="160" cy="100" r="4" fill="#00F5FF" class="pulse-point large-point"/>
+                                <circle cx="240" cy="80" r="3" fill="#00FF41" class="pulse-point"/>
+                                <circle cx="320" cy="75" r="5" fill="#00FF41" class="pulse-point large-point"/>
+                                <circle cx="400" cy="65" r="3" fill="#FFD700" class="pulse-point"/>
+                                <circle cx="480" cy="70" r="4" fill="#FFD700" class="pulse-point large-point"/>
+                                <circle cx="560" cy="55" r="3" fill="#8A2BE2" class="pulse-point"/>
+                                <circle cx="640" cy="45" r="5" fill="#8A2BE2" class="pulse-point large-point"/>
+                                <circle cx="720" cy="40" r="3" fill="#FF6B6B" class="pulse-point"/>
+                                <circle cx="800" cy="35" r="4" fill="#FF6B6B" class="pulse-point large-point"/>
+                            </g>
+                            
+                            <!-- Stock Symbols on Chart -->
+                            <g class="chart-stock-symbols">
+                                <text x="160" y="95" text-anchor="middle" fill="#00F5FF" font-size="10" font-weight="bold" class="symbol-text">ST-A</text>
+                                <text x="320" y="70" text-anchor="middle" fill="#00FF41" font-size="10" font-weight="bold" class="symbol-text">ST-B</text>
+                                <text x="480" y="65" text-anchor="middle" fill="#FFD700" font-size="10" font-weight="bold" class="symbol-text">ST-C</text>
+                                <text x="640" y="40" text-anchor="middle" fill="#8A2BE2" font-size="10" font-weight="bold" class="symbol-text">ST-D</text>
+                                <text x="800" y="30" text-anchor="middle" fill="#FF6B6B" font-size="10" font-weight="bold" class="symbol-text">ST-E</text>
+                            </g>
+                            
+                            <!-- Floating Percentage Indicators -->
+                            <g class="floating-indicators">
+                                <text x="160" y="85" text-anchor="middle" fill="#00F5FF" font-size="11" font-weight="bold" class="percentage-text">+2.34%</text>
+                                <text x="320" y="60" text-anchor="middle" fill="#00FF41" font-size="11" font-weight="bold" class="percentage-text">+1.89%</text>
+                                <text x="480" y="55" text-anchor="middle" fill="#FFD700" font-size="11" font-weight="bold" class="percentage-text">-0.67%</text>
+                                <text x="640" y="30" text-anchor="middle" fill="#8A2BE2" font-size="11" font-weight="bold" class="percentage-text">+0.92%</text>
+                                <text x="800" y="20" text-anchor="middle" fill="#FF6B6B" font-size="11" font-weight="bold" class="percentage-text">+1.45%</text>
+                            </g>
+                            
+                            <!-- Moving Average Lines -->
+                            <g class="moving-averages">
+                                <path class="ma-line" d="M 0 120 L 100 115 L 200 110 L 300 105 L 400 100 L 500 95 L 600 90 L 700 85 L 800 80" 
+                                      stroke="#00F5FF" stroke-width="1" fill="none" opacity="0.5" stroke-dasharray="5,5"/>
+                                <path class="ma-line" d="M 0 130 L 100 125 L 200 120 L 300 115 L 400 110 L 500 105 L 600 100 L 700 95 L 800 90" 
+                                      stroke="#FFD700" stroke-width="1" fill="none" opacity="0.5" stroke-dasharray="3,3"/>
+                            </g>
+                            
+                            <!-- Volume Bars -->
+                            <g class="volume-bars" opacity="0.4">
+                                <rect x="150" y="170" width="8" height="10" fill="#00F5FF"/>
+                                <rect x="230" y="165" width="8" height="15" fill="#00FF41"/>
+                                <rect x="310" y="160" width="8" height="20" fill="#FFD700"/>
+                                <rect x="390" y="175" width="8" height="5" fill="#8A2BE2"/>
+                                <rect x="470" y="168" width="8" height="12" fill="#FF6B6B"/>
+                                <rect x="550" y="162" width="8" height="18" fill="#00F5FF"/>
+                                <rect x="630" y="155" width="8" height="25" fill="#00FF41"/>
+                                <rect x="710" y="172" width="8" height="8" fill="#FFD700"/>
+                            </g>
+                        </svg>
+                        
+                        <!-- Enhanced Market Stats -->
+                        <div class="market-stats-overlay">
+                            <div class="stat-bubble">
+                                <div class="stat-value animated-value">+4.2%</div>
+                                <div class="stat-label">Market Average</div>
+                            </div>
+                            <div class="stat-bubble">
+                                <div class="stat-value trend-arrow">↗</div>
+                                <div class="stat-label">Trending Up</div>
+                            </div>
+                            <div class="stat-bubble">
+                                <div class="stat-value pulse-text">Live</div>
+                                <div class="stat-label">Real-time Data</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-performance-metrics">
+                <h3 class="metrics-section-title">AI Analysis Performance</h3>
+                <div class="performance-stats-grid">
+                    <div class="stat-module">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-value">2s</div>
+                        <div class="stat-label">Processing Speed</div>
+                    </div>
+                    <div class="stat-module">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-value">23,829</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-module">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-value">98%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-testimonials-feed">
+                <h3 class="testimonials-section-title">Recent User Feedback</h3>
+                <div class="testimonials-scroll-container">
+                    <div class="testimonials-scroll-track" id="scrollTrack">
+                        <div class="testimonial-item active" data-index="0">
+                            <div class="item-date">September 19</div>
+                            <div class="item-content">
+                                <span class="username">Michael_t****</span> <span class="analyzed-text">analyzed</span> <span class="stock-code">MIDD</span>
+                                <div class="feedback-text">"The AI analysis provided comprehensive data points and market insights for my research."</div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-item next" data-index="1">
+                            <div class="item-date">August 24</div>
+                            <div class="item-content">
+                                <span class="username">Sarah_i****</span> <span class="analyzed-text">analyzed</span> <span class="stock-code">MNRO</span>
+                                <div class="feedback-text">"The system generated detailed technical analysis charts within the promised time frame."</div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-item next" data-index="2">
+                            <div class="item-date">June 23</div>
+                            <div class="item-content">
+                                <span class="username">Robert_f****</span> <span class="analyzed-text">analyzed</span> <span class="stock-code">GOOG</span>
+                                <div class="feedback-text">"The platform offers comprehensive market analysis tools with quick processing capabilities."</div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-item next" data-index="3">
+                            <div class="item-date">September 22</div>
+                            <div class="item-content">
+                                <span class="username">Emily_s****</span> <span class="analyzed-text">analyzed</span> <span class="stock-code">GRAB</span>
+                                <div class="feedback-text">"The platform provides useful market indicators and technical analysis for informed decisions."</div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-item next" data-index="4">
+                            <div class="item-date">August 21</div>
+                            <div class="item-content">
+                                <span class="username">David_p****</span> <span class="analyzed-text">analyzed</span> <span class="stock-code">CRWD</span>
+                                <div class="feedback-text">"The platform delivers comprehensive analytical reports with various market indicators."</div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-item next" data-index="5">
+                            <div class="item-date">June 20</div>
+                            <div class="item-content">
+                                <span class="username">Lisa_m****</span> <span class="analyzed-text">analyzed</span> <span class="stock-code">CSTL</span>
+                                <div class="feedback-text">"The system provides detailed historical data and trend analysis for research purposes."</div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-item next" data-index="6">
+                            <div class="item-date">June 19</div>
+                            <div class="item-content">
+                                <span class="username">John_w****</span> <span class="analyzed-text">analyzed</span> <span class="stock-code">CDNA</span>
+                                <div class="feedback-text">"The interface is intuitive and the analytical reports are generated quickly as advertised."</div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-item next" data-index="7">
+                            <div class="item-date">August 18</div>
+                            <div class="item-content">
+                                <span class="username">Anna_k****</span> <span class="analyzed-text">analyzed</span> <span class="stock-code">CCJ</span>
+                                <div class="feedback-text">"The platform offers real-time data processing and comprehensive market analysis tools."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-legal-navigation">
+                <a href="policy.html" class="legal-link-element" target="_blank">Privacy Policy</a>
+                <a href="terms.html" class="legal-link-element" target="_blank">Terms of Service</a>
+                <a href="disclaimer.html" class="legal-link-element" target="_blank">Disclaimer</a> 
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Progress Modal -->
+    <div class="modal-quantum-overlay" id="progressModalOverlay">
+        <div class="neural-progress-container">
+            <div class="progress-status-text">AI Neural Network Analysis</div>
+            <div class="analysis-indicators-grid">
+                <div class="indicator-item" id="indicator1">
+                    <div class="indicator-text">Market Sentiment Analysis</div>
+                    <div class="indicator-status waiting" id="status1"></div>
+                </div>
+                <div class="indicator-item" id="indicator2">
+                    <div class="indicator-text">Technical Pattern Recognition</div>
+                    <div class="indicator-status waiting" id="status2"></div>
+                </div>
+                <div class="indicator-item" id="indicator3">
+                    <div class="indicator-text">Risk Assessment & Prediction</div>
+                    <div class="indicator-status waiting" id="status3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Completion Modal -->
+    <div class="modal-quantum-overlay" id="completionModalOverlay">
+        <div class="completion-modal-frame">
+            <button class="modal-close-btn" onclick="closeCompletionModal()">✕</button>
+            <div class="completion-primary-message">Analysis Complete!</div>
+            <div class="completion-secondary-note">
+                Your report analysis is complete, please click the link below to get the report
+            </div>
+            <div class="bonus-highlight">
+                <div class="bonus-text">🎁 Bonus: Future 5 Rising Stocks List</div>
+            </div>
+            <button class="whatsapp-redirect-button" onclick="ya2()">
+                Get Complete Report Now
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Testimonials Vertical Scroll
+        let currentIndex = 0;
+        const testimonialItems = document.querySelectorAll('.testimonial-item');
+        const totalItems = testimonialItems.length;
+
+        function updateTestimonialClasses() {
+            testimonialItems.forEach((item, index) => {
+                item.classList.remove('active', 'next', 'prev');
+                
+                if (index === currentIndex) {
+                    item.classList.add('active');
+                } else if (index > currentIndex) {
+                    item.classList.add('next');
+                } else {
+                    item.classList.add('prev');
+                }
+            });
+        }
+
+        function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateTestimonialClasses();
+        }
+
+        // Initialize classes
+        updateTestimonialClasses();
+
+        // Auto-scroll every 2 seconds
+        setInterval(nextTestimonial, 2000);
+
+        function showCustomAlert(message) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-2xl max-w-sm w-full mx-4 border border-cyan-400">
+                    <p class="text-white text-center mb-4 text-lg">${message}</p>
+                    <div class="flex justify-center">
+                        <button class="px-6 py-2 bg-cyan-500 text-white hover:bg-cyan-600 rounded-lg transition-all duration-300" onclick="this.closest('.fixed').remove()">OK</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function initiateQuantumAnalysis() {
+            const stockInput = document.getElementById('stockSymbolInput');
+            const symbolValue = stockInput.value.trim();
+            
+            if (!symbolValue) {
+                showCustomAlert('Please enter stock symbol');
+                return;
+            }
+            
+            executeProgressSequence();
+        }
+
+        function executeProgressSequence() {
+            const progressOverlay = document.getElementById('progressModalOverlay');
+            progressOverlay.style.display = 'flex';
+            
+            const indicators = [
+                { element: document.getElementById('indicator1'), status: document.getElementById('status1') },
+                { element: document.getElementById('indicator2'), status: document.getElementById('status2') },
+                { element: document.getElementById('indicator3'), status: document.getElementById('status3') }
+            ];
+            
+            // Start first indicator
+            let currentIndicator = 0;
+            
+            function processNextIndicator() {
+                if (currentIndicator < indicators.length) {
+                    const indicator = indicators[currentIndicator];
+                    
+                    // Set analyzing state
+                    indicator.element.classList.add('analyzing');
+                    indicator.status.classList.remove('waiting');
+                    indicator.status.classList.add('analyzing');
+                    indicator.status.innerHTML = '⟳';
+                    
+                    // Complete after delay
+                    setTimeout(() => {
+                        indicator.element.classList.remove('analyzing');
+                        indicator.element.classList.add('completed');
+                        indicator.status.classList.remove('analyzing');
+                        indicator.status.classList.add('completed');
+                        indicator.status.innerHTML = '✓';
+                        
+                        currentIndicator++;
+                        
+                        if (currentIndicator < indicators.length) {
+                            setTimeout(processNextIndicator, 200);
+                        } else {
+                            // All completed
+                            setTimeout(() => {
+                                progressOverlay.style.display = 'none';
+                                displayCompletionModal();
+                            }, 500);
+                        }
+                    }, 800 + Math.random() * 500);
+                } else {
+                    setTimeout(() => {
+                        progressOverlay.style.display = 'none';
+                        displayCompletionModal();
+                    }, 500);
+                }
+            }
+            
+            processNextIndicator();
+        }
+
+        function displayCompletionModal() {
+            const completionOverlay = document.getElementById('completionModalOverlay');
+            completionOverlay.style.display = 'flex';
+        }
+
+        // Close modals when clicking outside
+        document.addEventListener('click', function(event) {
+            const progressModal = document.getElementById('progressModalOverlay');
+            const completionModal = document.getElementById('completionModalOverlay');
+            
+            if (event.target === progressModal) {
+                progressModal.style.display = 'none';
+            }
+            if (event.target === completionModal) {
+                completionModal.style.display = 'none';
+            }
+        });
+
+        // Close completion modal function
+        function closeCompletionModal() {
+            const completionModal = document.getElementById('completionModalOverlay');
+            completionModal.style.display = 'none';
+        }
+
+        // Enter key support for input
+        document.getElementById('stockSymbolInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                initiateQuantumAnalysis();
+            }
+        });
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"5336da4711a74b43a4a09a3940a1adf6","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
