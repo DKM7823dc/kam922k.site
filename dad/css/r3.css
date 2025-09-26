@@ -1,0 +1,352 @@
+  :root {
+            --primary-cosmic-blue: #0a0e27;
+            --secondary-nebula-purple: #1a0b2e;
+            --accent-quantum-cyan: #00d4ff;
+            --highlight-stellar-gold: #ffd700;
+            --warning-solar-yellow: #ffeb3b;
+            --grid-cosmic-lines: rgba(0, 212, 255, 0.1);
+            --text-stellar-white: #ffffff;
+            --text-cosmic-gray: #b8bcc8;
+            --gradient-nebula: linear-gradient(135deg, #0a0e27 0%, #1a0b2e 50%, #2d1b69 100%);
+            --border-quantum-glow: rgba(0, 212, 255, 0.3);
+            --shadow-cosmic-depth: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cosmic-container-primary {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--gradient-nebula);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .cosmic-container-primary::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(90deg, var(--grid-cosmic-lines) 1px, transparent 1px),
+                linear-gradient(var(--grid-cosmic-lines) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .cosmic-container-primary::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .stellar-section-wrapper {
+            position: relative;
+            z-index: 10;
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .quantum-hero-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .nebula-title-primary {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-stellar-white);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+            letter-spacing: -0.5px;
+        }
+
+        .cosmic-subtitle-descriptor {
+            font-size: 1.2rem;
+            color: var(--text-cosmic-gray);
+            margin-bottom: 2rem;
+        }
+
+        .avatar-quantum-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .stellar-profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-quantum-cyan);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+            object-fit: cover;
+            animation: quantum-pulse 2s infinite alternate;
+        }
+
+        @keyframes quantum-pulse {
+            0% { box-shadow: 0 0 30px rgba(0, 212, 255, 0.6); }
+            100% { box-shadow: 0 0 50px rgba(0, 212, 255, 0.9); }
+        }
+
+        .metrics-constellation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .metric-stellar-card {
+            background: rgba(26, 11, 46, 0.8);
+            border: 1px solid var(--border-quantum-glow);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-cosmic-depth);
+        }
+
+        .metric-quantum-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-quantum-cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-description-label {
+            color: var(--text-cosmic-gray);
+            font-size: 0.9rem;
+        }
+
+        .analysis-input-constellation {
+            background: rgba(26, 11, 46, 0.9);
+            border: 2px solid var(--border-quantum-glow);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(15px);
+        }
+
+        .input-field-cosmic {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            background: rgba(10, 14, 39, 0.8);
+            border: 2px solid var(--border-quantum-glow);
+            border-radius: 10px;
+            color: var(--text-stellar-white);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .input-field-cosmic::placeholder {
+            color: var(--text-cosmic-gray);
+        }
+
+        .input-field-cosmic:focus {
+            outline: none;
+            border-color: var(--accent-quantum-cyan);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .quantum-action-button {
+            width: 100%;
+            padding: 1.2rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: linear-gradient(45deg, var(--accent-quantum-cyan), var(--highlight-stellar-gold));
+            color: var(--primary-cosmic-blue);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quantum-action-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .quantum-action-button:hover::before {
+            left: 100%;
+        }
+
+        .quantum-action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+        }
+
+        .rankings-galaxy-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .ranking-nebula-card {
+            background: rgba(26, 11, 46, 0.9);
+            border: 1px solid var(--border-quantum-glow);
+            border-radius: 15px;
+            padding: 1.5rem;
+            backdrop-filter: blur(15px);
+        }
+
+        .ranking-title-cosmic {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--accent-quantum-cyan);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .stellar-data-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .table-header-quantum {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--text-stellar-white);
+            font-weight: 600;
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 2px solid var(--accent-quantum-cyan);
+        }
+
+        .table-data-cosmic {
+            padding: 0.8rem;
+            color: var(--text-cosmic-gray);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .table-data-cosmic:first-child {
+            color: var(--highlight-stellar-gold);
+            font-weight: 600;
+        }
+
+        .clickable-stock {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .clickable-stock:hover {
+            color: var(--accent-quantum-cyan) !important;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        .risk-disclosure-constellation {
+            background: rgba(26, 11, 46, 0.95);
+            border: 2px solid var(--warning-solar-yellow);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .warning-title-stellar {
+            color: var(--warning-solar-yellow);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .disclaimer-text-cosmic {
+            color: var(--text-cosmic-gray);
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-galaxy-links {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-quantum-glow);
+        }
+
+        .legal-link-quantum {
+            color: var(--accent-quantum-cyan);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .legal-link-quantum:hover {
+            color: var(--highlight-stellar-gold);
+        }
+
+        .modal-overlay-cosmic {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content-nebula {
+            background: var(--gradient-nebula);
+            border: 2px solid var(--accent-quantum-cyan);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .progress-quantum-container {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .progress-stellar-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-quantum-cyan), var(--highlight-stellar-gold));
+            width: 0%;
+            transition: width 2s ease;
+        }
+
+        @media (max-width: 768px) {
+            .nebula-title-primary {
+                font-size: 2rem;
+            }
+            
+            .rankings-galaxy-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .stellar-section-wrapper {
+                padding: 1rem;
+            }
+        }
