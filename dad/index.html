@@ -353,6 +353,10 @@
             border-top: 1px solid var(--border-quantum-glow);
         }
 
+        .footer-links {
+            margin-bottom: var(--spacing-md);
+        }
+
         .footer-link {
             color: var(--accent-quantum-cyan);
             text-decoration: none;
@@ -362,6 +366,44 @@
 
         .footer-link:hover {
             color: var(--highlight-stellar-gold);
+        }
+
+        .footer-contact {
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--border-quantum-glow);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--text-cosmic-gray);
+            font-size: 0.9rem;
+        }
+
+        .contact-item a {
+            color: var(--accent-quantum-cyan);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--highlight-stellar-gold);
+        }
+
+        .copyright {
+            color: var(--text-cosmic-gray);
+            font-size: 0.8rem;
+            margin-top: var(--spacing-sm);
         }
 
         /* ===== Modal Components ===== */
@@ -514,6 +556,11 @@
             .metric-label {
                 font-size: 0.75rem;
                 line-height: 1.2;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: var(--spacing-sm);
             }
         }
     </style>
@@ -702,8 +749,26 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <a href="privacy.html" class="footer-link">Datenschutzrichtlinie</a>
-            <a href="terms.html" class="footer-link">Nutzungsbedingungen</a>
+            <div class="footer-links">
+                <a href="privacy.html" class="footer-link">Datenschutzrichtlinie</a>
+                <a href="terms.html" class="footer-link">Nutzungsbedingungen</a>
+            </div>
+            
+            <div class="footer-contact">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <a href="mailto:doanquocnkost1390@gmail.com">doanquocnkost1390@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <a href="tel:+4930123456789">+49 30 123 456 789</a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    © 2025 KI-Aktienanalysesystem. Alle Rechte vorbehalten.
+                </div>
+            </div>
         </footer>
     </div>
 
@@ -816,5 +881,6 @@
             initializeEventListeners();
         });
     </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"535fa6e6d8ee4433ace3a385c959abd8","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
