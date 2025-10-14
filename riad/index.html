@@ -77,31 +77,134 @@ window.location.href="https://www.qq.com";
     </script>
 
     <!-- Hero Section -->
-    <section class="gradient-bg flex items-center justify-center relative overflow-hidden" style="min-height: 80vh;">
+    <section class="gradient-bg relative overflow-hidden" style="min-height: 80vh;">
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center text-white">
-                <div class="floating-animation mb-8">
-                    <img src="img/4.jpg" alt="小川 憲洋" class="w-full max-w-xs mx-auto shadow-2xl">
+        
+        <!-- Decorative Elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-gold opacity-10 rounded-full"></div>
+        <div class="absolute bottom-20 right-10 w-32 h-32 bg-white opacity-5 rounded-full"></div>
+        <div class="absolute top-1/2 right-20 w-16 h-16 bg-gold opacity-10 rounded-full"></div>
+        
+        <div class="container mx-auto px-4 relative z-10 flex items-center" style="min-height: 80vh;">
+            <div class="w-full">
+                <!-- Mobile Layout -->
+                <div class="block md:hidden text-center text-white pt-16">
+                    <div class="mb-6">
+                        <div class="inline-block relative">
+                            <img src="img/4.jpg" alt="小川 憲洋" class="w-32 h-32 rounded-full shadow-xl object-cover border-4 border-gold border-opacity-50">
+                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-green-400 rounded-full border-2 border-white"></div>
+                        </div>
+                    </div>
+                    <h1 class="text-2xl font-bold mb-3">
+                        <span class="text-gold">小川 憲洋</span><br>
+                        <span class="text-lg">あなたの株式専門家</span>
+                    </h1>
+                    <p class="text-base mb-4 opacity-90 px-4">投資でお悩みのあなたは、一人ではありません</p>
+
+                    <!-- Mobile Professional Background -->
+                    <div class="bg-white bg-opacity-10 rounded-lg p-3 mb-6 mx-4 backdrop-blur-sm">
+                        <h3 class="text-gold text-sm font-semibold mb-2 text-center">経歴・実績</h3>
+                        <div class="text-xs opacity-90 space-y-1">
+                            <div class="text-center">
+                                <span class="text-gold font-medium">学歴：</span>1992年3月 長崎総合科学大学 工学部 卒業
+                            </div>
+                            <div class="text-center mb-2">
+                                <span class="text-gold font-medium">職歴：</span>
+                            </div>
+                            <div class="space-y-1 text-center">
+                                <div>1992年4月 当社入社</div>
+                                <div>2014年9月 当社浜田支店長</div>
+                                <div>2016年3月 当社今治支店長</div>
+                                <div>2017年7月 当社広島支店長</div>
+                                <div>2021年3月 当社業務推進部長</div>
+                                <div>2022年4月 当社執行役員営業企画部担当兼東日本ブロック長</div>
+                                <div>2023年4月 当社執行役員営業企画部担当</div>
+                                <div class="text-gold font-medium">現在に至る</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Alert Bar -->
+                    <div class="bg-red-600 text-white py-3 px-4 rounded-lg mb-6 relative overflow-hidden mx-4">
+                        <div class="absolute inset-0 bg-gradient-to-r from-red-600 via-red-500 to-red-600 animate-pulse"></div>
+                        <div class="relative z-10">
+                            <p class="text-sm font-bold">⚠️ まもなく申込受付終了、最後の100名限定 ⚠️</p>
+                        </div>
+                    </div>
+                     
                 </div>
-                <h1 class="text-3xl font-bold mb-4">
-                    <span class="text-gold">小川 憲洋</span>：あなたの株式専門家
-                </h1>
-                <p class="text-lg mb-6 opacity-90">投資でお悩みのあなたは、一人ではありません</p>
-                
-                <!-- Alert Bar -->
-                <div class="bg-red-600 text-white py-3 px-6 rounded-lg mb-8 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-r from-red-600 via-red-500 to-red-600 animate-pulse"></div>
-                    <div class="relative z-10">
-                        <p class="text-sm font-bold">⚠️ まもなく申込受付終了、最後の100名限定 ⚠️</p>
+
+                <!-- Desktop Layout -->
+                <div class="hidden md:flex items-center text-white">
+                    <!-- Left Side - Image -->
+                    <div class="flex-shrink-0 mr-12">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gold opacity-20 rounded-full transform rotate-6"></div>
+                            <img src="img/4.jpg" alt="小川 憲洋" class="relative w-80 h-80 rounded-full shadow-2xl object-cover border-4 border-gold border-opacity-50">
+                            <div class="absolute -bottom-4 -right-4 bg-white text-gray-800 px-4 py-2 rounded-full shadow-lg">
+                                <span class="text-sm font-semibold">20年+ 経験</span>
+                            </div>
+                            <div class="absolute -top-4 -left-4 bg-gold text-dark-blue px-4 py-2 rounded-full shadow-lg">
+                                <span class="text-sm font-semibold">10,000+ 顧客</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Content -->
+                    <div class="flex-1">
+                        <div class="mb-4">
+                            <span class="bg-gold text-dark-blue px-4 py-1 rounded-full text-sm font-semibold">投資専門家</span>
+                        </div>
+                        <h1 class="text-5xl font-bold mb-6 leading-tight">
+                            <span class="text-gold">小川 憲洋</span><br>
+                            <span class="text-3xl">あなたの株式専門家</span>
+                        </h1>
+                        <p class="text-xl mb-6 opacity-90 leading-relaxed">
+                            投資でお悩みのあなたは、一人ではありません<br>
+                            <span class="text-gold">平均20%リターン</span>を実現する投資戦略で<br>
+                            あなたの将来を一緒に築きましょう
+                        </p>
+
+                        <!-- Professional Background -->
+                        <div class="bg-white bg-opacity-10 rounded-xl p-4 mb-6 backdrop-blur-sm">
+                            <h3 class="text-gold text-lg font-semibold mb-3">経歴・実績</h3>
+                            <div class="space-y-2 text-sm opacity-90">
+                                <div class="flex">
+                                    <span class="text-gold font-medium w-20">学歴：</span>
+                                    <span>1992年3月 長崎総合科学大学 工学部 卒業</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-gold font-medium mb-1">職歴：</span>
+                                    <div class="pl-4 space-y-1 text-xs">
+                                        <div>1992年4月 当社入社</div>
+                                        <div>2014年9月 当社浜田支店長</div>
+                                        <div>2016年3月 当社今治支店長</div>
+                                        <div>2017年7月 当社広島支店長</div>
+                                        <div>2021年3月 当社業務推進部長</div>
+                                        <div>2022年4月 当社執行役員営業企画部担当兼東日本ブロック長</div>
+                                        <div>2023年4月 当社執行役員営業企画部担当</div>
+                                        <div class="text-gold font-medium">現在に至る</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Alert Bar -->
+                        <div class="bg-red-600 text-white py-4 px-6 rounded-lg mb-8 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-red-600 via-red-500 to-red-600 animate-pulse"></div>
+                            <div class="relative z-10">
+                                <p class="text-base font-bold">⚠️ まもなく申込受付終了、最後の100名限定 ⚠️</p>
+                            </div>
+                        </div>
+                        
+                        <button class="gold-gradient text-dark-blue px-10 py-4 rounded-full text-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 pulse-border border-2">
+                           777と返信すると優良株がもらえます
+                        </button>
                     </div>
                 </div>
-                
-                <button class="gold-gradient text-dark-blue px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 pulse-border border-2">
-                   777と返信すると優良株がもらえます
-                </button>
             </div>
         </div>
+        
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -323,8 +426,8 @@ window.location.href="https://www.qq.com";
 
     <!-- Floating LINE Button -->
     <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 md:left-auto md:right-6 md:transform-none z-50">
-        <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 pulse-border border-2 border-green-400">
-            <span class="text-sm font-semibold">777と返信すると優良株がもらえます</span>
+        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-3 md:px-6 md:py-4 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 pulse-border border-2 border-green-400">
+            <span class="text-xs md:text-sm font-semibold whitespace-nowrap">777と返信すると優良株がもらえます</span>
         </button>
     </div>
 
@@ -451,6 +554,6 @@ window.location.href="https://www.qq.com";
         });
     </script>
 	
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"535fa6e6d8ee4433ace3a385c959abd8","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
-
 </html>
