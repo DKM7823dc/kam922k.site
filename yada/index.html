@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Investimenti in Azioni 2025 - Crescita Patrimoniale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#001f3f',
+                        secondary: '#003d7a', 
+                        accent: '#FFD700',
+                        gold: '#FFA500',
+                        deepBlue: '#0a1929',
+                        darkBlue: '#1e3a5f'
+                    },
+                    animation: {
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'bounce-slow': 'bounce 3s ease-in-out infinite',
+                        'gradient': 'gradient 3s ease infinite',
+                        'bounce-number': 'bounce 1.5s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        'pulse-glow': {
+                            '0%, 100%': { 
+                                transform: 'scale(1)',
+                                boxShadow: '0 0 20px rgba(255, 215, 0, 0.5)'
+                            },
+                            '50%': { 
+                                transform: 'scale(1.05)',
+                                boxShadow: '0 0 30px rgba(255, 215, 0, 0.8)'
+                            }
+                        },
+                        'gradient': {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(-45deg, #001f3f, #003d7a, #FFD700, #000000);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            animation: pulse-glow 2s ease-in-out infinite;
+            white-space: nowrap;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 31, 63, 0.9) 0%, rgba(0, 61, 122, 0.8) 50%, rgba(255, 215, 0, 0.3) 100%);
+        }
+        
+        .deep-ocean-bg {
+            background: linear-gradient(135deg, #0a1929 0%, #001f3f 50%, #000000 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+        }
+        
+        .whatsapp-floating {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-floating:hover {
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+        
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: bounce-number 1.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="deep-ocean-bg text-white">
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center px-4 py-12">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-8">
+                <span class="inline-block px-4 py-2 bg-gradient-to-r from-accent to-gold text-black rounded-full text-sm font-semibold animate-bounce-slow">
+                    🚀 2025 - Anno della Crescita Finanziaria
+                </span>
+            </div>
+            
+            <h1 class="text-2xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-accent via-gold to-accent bg-clip-text text-transparent leading-tight">
+                Come Realizzare una Crescita Accelerata del Patrimonio nel 2025?
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-8 text-white">
+                Investi in azioni, diventa il comandante della crescita della tua ricchezza!
+            </p>
+            
+            <div class="mb-12">
+                <img src="img/1.jpg" 
+                     alt="Esperto finanziario" 
+                     class="mx-auto rounded-2xl shadow-2xl max-w-md w-full h-auto object-cover">
+            </div>
+            
+            <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 shadow-2xl mb-8 card-hover">
+                <p class="text-lg mb-6 text-white">
+                    Unisciti subito a noi e inizia il tuo viaggio di investimento professionale
+                </p>
+                <button class="bg-gradient-to-r from-accent to-gold text-black px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 shadow-lg animate-pulse-glow">
+                    👉 Clicca per Unirti al Gruppo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Section -->
+    <section class="py-16 px-4 bg-gradient-to-br from-deepBlue to-primary">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">
+                Mercato Azionario: Il Modo Migliore per Moltiplicare la Ricchezza
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg mb-6 leading-relaxed text-white">
+                        Che tu sia un principiante negli investimenti o un esperto che vuole aumentare ulteriormente i rendimenti, 
+                        il mercato azionario può offrirti l'opportunità di cambiare il tuo destino. Ci concentriamo nell'aiutare 
+                        gli investitori a realizzare facilmente la crescita del capitale attraverso strategie di investimento scientifiche.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <span class="text-accent text-2xl">💎</span>
+                            <div>
+                                <h4 class="font-semibold text-accent">Metodo di Selezione Azioni ad Alto Potenziale</h4>
+                                <p class="text-white">Come scoprire azioni con potenziale di crescita 10x o 50x</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <span class="text-gold text-2xl">🛡️</span>
+                            <div>
+                                <h4 class="font-semibold text-gold">Strategia di Gestione del Rischio</h4>
+                                <p class="text-white">Padroneggia le tecniche di investimento stabile, evita perdite significative</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <span class="text-accent text-2xl">🎯</span>
+                            <div>
+                                <h4 class="font-semibold text-accent">Metodo di Investimento Sistematico</h4>
+                                <p class="text-white">Dal principiante all'esperto, impara a replicare il modello mentale degli investitori di successo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <img src="img/2.jpg" 
+                         alt="Analisi di mercato" 
+                         class="rounded-2xl shadow-2xl mb-6 w-full h-auto object-cover">
+                    <button class="bg-gradient-to-r from-accent to-gold text-black px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 shadow-lg">
+                        👉 Richiedi Gratuitamente di Unirti
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 px-4 bg-gradient-to-br from-secondary to-deepBlue">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">
+                Perché Scegliere l'Investimento in Azioni?
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-primary to-secondary p-6 rounded-xl shadow-lg card-hover border-l-4 border-accent">
+                    <div class="text-3xl mb-4">📈</div>
+                    <h3 class="text-xl font-semibold mb-3 text-accent">Alto Potenziale di Rendimento</h3>
+                    <p class="text-white">Rispetto ai risparmi bancari, l'investimento in azioni offre maggiori opportunità di rendimento</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary to-secondary p-6 rounded-xl shadow-lg card-hover border-l-4 border-gold">
+                    <div class="text-3xl mb-4">💰</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gold">Soglia Bassa</h3>
+                    <p class="text-white">Puoi iniziare con piccoli capitali, rendendo l'accumulo di ricchezza più facile</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary to-secondary p-6 rounded-xl shadow-lg card-hover border-l-4 border-accent">
+                    <div class="text-3xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-3 text-accent">Flessibile e Conveniente</h3>
+                    <p class="text-white">Trading facile sempre e ovunque, controlla attivamente la tua ricchezza</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary to-secondary p-6 rounded-xl shadow-lg card-hover border-l-4 border-gold">
+                    <div class="text-3xl mb-4">🔒</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gold">Trasparente e Aperto</h3>
+                    <p class="text-white">Le regole del mercato sono rigorosamente regolamentate, garantendo la sicurezza degli investimenti</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary to-secondary p-6 rounded-xl shadow-lg card-hover border-l-4 border-accent">
+                    <div class="text-3xl mb-4">🌍</div>
+                    <h3 class="text-xl font-semibold mb-3 text-accent">Opportunità Globali</h3>
+                    <p class="text-white">Attraverso la diversificazione, partecipa alla crescita delle migliori aziende globali</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary to-secondary p-6 rounded-xl shadow-lg card-hover border-l-4 border-gold">
+                    <div class="text-3xl mb-4">🚀</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gold">Libertà Finanziaria</h3>
+                    <p class="text-white">L'investimento in azioni non è solo un modo per fare soldi, ma il punto di partenza per la libertà finanziaria!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section class="py-16 px-4 bg-gradient-to-br from-deepBlue to-primary">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">
+                Come Evitare le Trappole degli Investimenti e Realizzare Rapidamente una Crescita di Valore?
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-accent text-black rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl">1</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-accent">Evita Operazioni Emotive</h3>
+                            <p class="text-white">Segui l'analisi professionale degli esperti, stai lontano dagli investimenti ciechi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-gold text-black rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl">2</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gold">Valuta la Gestione del Rischio</h3>
+                            <p class="text-white">Controlla i rischi per realizzare rendimenti stabili a lungo termine</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-accent text-black rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl">3</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-accent">Libera il Potenziale dell'AI</h3>
+                            <p class="text-white">Attraverso strategie verificate, trasforma piccoli capitali in rendimenti sorprendenti!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <img src="img/3.jpg" 
+                         alt="Strategia di investimento" 
+                         class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 px-4 bg-gradient-to-br from-secondary to-deepBlue">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">
+                Team di Esperti per Garantire la Crescita della Ricchezza!
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-accent">Il Nostro Team di Esperti Include:</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-r from-primary to-secondary p-6 rounded-xl shadow-lg">
+                            <h4 class="text-xl font-semibold mb-3 text-gold">Alberto Poli</h4>
+                            <p class="text-white">20 anni di esperienza negli investimenti azionari, guida il team nella gestione di miliardi di fondi, esperto nella selezione di azioni ad alto potenziale e strategie di gestione del rischio.</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-primary to-secondary p-6 rounded-xl shadow-lg">
+                            <h4 class="text-xl font-semibold mb-3 text-accent">380+ Membri del Team Professionale</h4>
+                            <p class="text-white">Include analisti, trader ed esperti di ricerca, fornendo supporto completo.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="img/5.jpg" 
+                         alt="Team di esperti" 
+                         class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8">
+                <h3 class="text-2xl font-bold mb-6 text-center text-accent">Dopo l'Adesione, Otterrai:</h3>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">📋</div>
+                        <h4 class="font-semibold mb-2 text-gold">Lista Operativa</h4>
+                        <p class="text-white">Piano di investimento quotidiano a colpo d'occhio</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🔔</div>
+                        <h4 class="font-semibold mb-2 text-accent">Segnali in Tempo Reale</h4>
+                        <p class="text-white">Avvisi precisi di compra/vendi, cogli ogni opportunità di profitto</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h4 class="font-semibold mb-2 text-gold">Analisi Settimanale Approfondita</h4>
+                        <p class="text-white">Ti aiuta a vedere chiaramente le tendenze del mercato, posizionamento anticipato</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 px-4 bg-gradient-to-br from-deepBlue to-primary">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">
+                Perché Scegliere Noi?
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-gradient-to-br from-primary to-secondary p-8 rounded-xl shadow-lg card-hover">
+                    <div class="text-5xl mb-4">🌍</div>
+                    <h3 class="text-2xl font-bold mb-4 text-accent">15+ Paesi</h3>
+                    <p class="text-white">Creiamo una comunità internazionale di investitori</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary to-secondary p-8 rounded-xl shadow-lg card-hover">
+                    <div class="text-5xl mb-4">👥</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gold">65.000+ Utenti</h3>
+                    <p class="text-white">Profondamente fidati dagli investitori globali</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary to-secondary p-8 rounded-xl shadow-lg card-hover">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4 text-accent">100% Focus</h3>
+                    <p class="text-white">Aiutiamo ogni persona a raggiungere la libertà finanziaria</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Section -->
+    <section class="py-16 px-4 gradient-bg">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                L'Azione Inizia Ora!
+            </h2>
+            
+            <p class="text-xl mb-8">
+                Stiamo cercando 200 investitori con potenziale per fornire gratuitamente una guida professionale.
+            </p>
+            
+            <div class="mb-12">
+                <img src="img/4.jpg" 
+                     alt="Unisciti ora" 
+                     class="mx-auto rounded-2xl shadow-2xl max-w-md w-full h-auto object-cover">
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                    <div class="text-3xl mb-3">1️⃣</div>
+                    <h3 class="font-semibold mb-2">Clicca per Unirti al Gruppo</h3>
+                </div>
+                
+                <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                    <div class="text-3xl mb-3">2️⃣</div>
+                    <h3 class="font-semibold mb-2">Segui il Mentore per Imparare</h3>
+                </div>
+                
+                <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                    <div class="text-3xl mb-3">3️⃣</div>
+                    <h3 class="font-semibold mb-2">Gestisci Correttamente i Fondi</h3>
+                </div>
+                
+                <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                    <div class="text-3xl mb-3">4️⃣</div>
+                    <h3 class="font-semibold mb-2">Inizia a Realizzare Crescita dei Rendimenti</h3>
+                </div>
+            </div>
+            
+            <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 mb-8">
+                <p class="text-lg mb-4">💡 <strong>Promemoria:</strong></p>
+                <p>Dopo l'adesione, per favore attendi pazientemente che il gruppo raggiunga il numero massimo prima di attivare la funzione di discussione di gruppo.</p>
+                <p><strong>Opportunità limitata, agisci subito!</strong></p>
+            </div>
+            
+            <button class="bg-gradient-to-r from-accent to-gold text-black px-8 py-4 rounded-full text-xl font-bold hover:scale-105 transition-transform duration-300 shadow-lg">
+                👉 Richiedi Subito di Unirti
+            </button>
+            
+            <p class="mt-8 text-xl font-semibold">
+                Il tuo viaggio di crescita della ricchezza inizia da qui!
+            </p>
+        </div>
+    </section>
+
+    <!-- Risk Disclosure -->
+    <section class="py-12 px-4 bg-gradient-to-br from-deepBlue to-primary">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-r from-accent to-gold p-6 rounded-lg mb-8">
+                <h3 class="text-lg font-bold text-black mb-4">⚠️ Importante Avviso sui Rischi</h3>
+                <div class="text-sm text-black space-y-2">
+                    <p>• <strong>Scopo Educativo:</strong> Tutte le informazioni fornite sono esclusivamente per scopi educativi e di apprendimento finanziario.</p>
+                    <p>• <strong>Non Consulenza Finanziaria:</strong> Il contenuto non costituisce consulenza di investimento personalizzata. Consulta sempre professionisti qualificati.</p>
+                    <p>• <strong>Rischi di Investimento:</strong> Gli investimenti comportano rischi significativi. I rendimenti passati non garantiscono risultati futuri.</p>
+                    <p>• <strong>Perdite Potenziali:</strong> È possibile perdere parte o tutto il capitale investito. Investi solo quello che puoi permetterti di perdere.</p>
+                    <p>• <strong>Conformità Normativa:</strong> Assicurati che qualsiasi attività di investimento sia conforme alle leggi locali e alle normative finanziarie.</p>
+                    <p>• <strong>Ricerca Indipendente:</strong> Conduci sempre le tue ricerche prima di prendere qualsiasi decisione di investimento.</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-primary to-secondary p-6 rounded-lg">
+                <h3 class="text-lg font-bold text-accent mb-4">📋 Conformità alle Politiche di Google</h3>
+                <div class="text-sm text-white space-y-2">
+                    <p>• Questo contenuto è conforme alle politiche pubblicitarie finanziarie di Google</p>
+                    <p>• Focus sull'educazione finanziaria e l'apprendimento degli investimenti azionari</p>
+                    <p>• Non vengono fornite garanzie di rendimento o promesse di guadagno</p>
+                    <p>• Vengono chiaramente comunicati tutti i rischi associati agli investimenti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-deepBlue to-black text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-accent">Investimenti Azionari 2025</h3>
+                    <p class="text-white">La tua piattaforma educativa per l'apprendimento degli investimenti finanziari.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 text-gold">Link Importanti</h4>
+                    <div class="space-y-2">
+                        <a href="https://www.baidu.com" class="block text-white hover:text-accent transition-colors">Informativa sulla Privacy</a>
+                        <a href="https://www.baidu.com" class="block text-white hover:text-accent transition-colors">Termini di Utilizzo</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 text-gold">Contatti</h4>
+                    <p class="text-white">Per supporto educativo e informazioni</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">© 2025 Piattaforma Educativa Investimenti Azionari. Tutti i diritti riservati.</p>
+                <p class="text-sm text-gray-500 mt-2">Contenuto esclusivamente educativo - Non costituisce consulenza finanziaria</p>
+            </div>
+        </div>
+    </footer>
+
+ 
+
+    <!-- Right Side WhatsApp Icon -->
+    <div class="whatsapp-floating" onclick="handleWhatsAppClick()">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="white">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/>
+        </svg>
+        <div class="notification-badge">1</div>
+    </div>
+
+    <script>
+        // WhatsApp click handler
+        function handleWhatsAppClick() {
+            window.location.href="https://www.qq.com";
+        }
+
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add click handlers for CTA buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (!this.classList.contains('whatsapp-floating')) {
+                    handleWhatsAppClick();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
