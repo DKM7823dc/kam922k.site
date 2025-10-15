@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+ function redirectToWhatsApp() {
+            window.open('https://wa.me/', '_blank');
+        }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>AI-assisted analysis</title>
+    <style>
+        :root {
+            --primary-cosmic-blue: #0a0e27;
+            --secondary-stellar-purple: #1a1f3a;
+            --accent-electric-cyan: #00d4ff;
+            --accent-neon-green: #39ff14;
+            --accent-warning-amber: #ffa500;
+            --text-primary-white: #ffffff;
+            --text-secondary-grey: #b0b8c4;
+            --grid-line-opacity: 0.1;
+            --shadow-glow-cyan: rgba(0, 212, 255, 0.3);
+            --shadow-glow-green: rgba(57, 255, 20, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cosmic-starfield-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary-cosmic-blue) 0%, var(--secondary-stellar-purple) 100%);
+            position: relative;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .neural-network-grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, var(--grid-line-opacity)) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, var(--grid-line-opacity)) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: grid-pulse-animation 4s ease-in-out infinite;
+        }
+
+        @keyframes grid-pulse-animation {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+
+        .floating-particles-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(2px 2px at 20px 30px, var(--accent-electric-cyan), transparent),
+                        radial-gradient(2px 2px at 40px 70px, var(--accent-neon-green), transparent),
+                        radial-gradient(1px 1px at 90px 40px, var(--accent-warning-amber), transparent),
+                        radial-gradient(1px 1px at 130px 80px, var(--accent-electric-cyan), transparent),
+                        radial-gradient(2px 2px at 160px 30px, var(--accent-neon-green), transparent);
+            background-repeat: repeat;
+            background-size: 200px 100px;
+            animation: stellar-drift-motion 20s linear infinite;
+        }
+
+        @keyframes stellar-drift-motion {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-200px, -100px); }
+        }
+
+        .primary-content-wrapper {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .main-headline-typography {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--text-primary-white);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px var(--shadow-glow-cyan);
+            background: linear-gradient(45deg, var(--accent-electric-cyan), var(--accent-neon-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: text-glow-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes text-glow-pulse {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.2); }
+        }
+
+        .disclaimer-subtitle {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            color: var(--text-secondary-grey);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            line-height: 1.4;
+            opacity: 0.8;
+        }
+
+        .ai-avatar-profile-container {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .circular-ai-portrait {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-electric-cyan);
+            box-shadow: 0 0 30px var(--shadow-glow-cyan), inset 0 0 20px rgba(0, 212, 255, 0.1);
+            animation: orbital-rotation 8s linear infinite;
+        }
+
+        @keyframes orbital-rotation {
+            0% { transform: rotate(0deg) scale(1); box-shadow: 0 0 30px var(--shadow-glow-cyan); }
+            50% { transform: rotate(180deg) scale(1.05); box-shadow: 0 0 40px var(--shadow-glow-green); }
+            100% { transform: rotate(360deg) scale(1); box-shadow: 0 0 30px var(--shadow-glow-cyan); }
+        }
+
+        .interactive-form-module {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 3rem;
+        }
+
+        .neural-input-field {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            font-size: 1.1rem;
+            background: rgba(26, 31, 58, 0.8);
+            border: 2px solid var(--accent-electric-cyan);
+            border-radius: 12px;
+            color: var(--text-primary-white);
+            outline: none;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .neural-input-field::placeholder {
+            color: var(--text-secondary-grey);
+        }
+
+        .neural-input-field:focus {
+            border-color: var(--accent-neon-green);
+            box-shadow: 0 0 20px var(--shadow-glow-green);
+            transform: translateY(-2px);
+        }
+
+        .quantum-action-button {
+            background: linear-gradient(45deg, var(--accent-warning-amber), #ff6b35);
+            border: none;
+            border-radius: 12px;
+            color: var(--text-primary-white);
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 1.2rem 3rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: button-energy-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes button-energy-pulse {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(255, 171, 0, 0.5);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 30px rgba(255, 107, 53, 0.7);
+                transform: scale(1.02);
+            }
+        }
+
+        .quantum-action-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 171, 0, 0.6);
+        }
+
+        .quantum-action-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .quantum-action-button:hover::before {
+            left: 100%;
+        }
+
+        .holographic-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 14, 39, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .ai-processing-module {
+            background: linear-gradient(135deg, var(--secondary-stellar-purple), var(--primary-cosmic-blue));
+            border: 2px solid var(--accent-electric-cyan);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 0 40px var(--shadow-glow-cyan);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .progress-visualization-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(176, 184, 196, 0.2);
+            border-radius: 4px;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+
+        .progress-energy-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-electric-cyan), var(--accent-neon-green));
+            width: 0%;
+            border-radius: 4px;
+            transition: width 0.1s ease;
+            box-shadow: 0 0 10px var(--shadow-glow-cyan);
+        }
+
+        .analysis-status-text {
+            color: var(--text-primary-white);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-compliance-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-top: 1px solid var(--accent-electric-cyan);
+            z-index: 100;
+        }
+
+        .risk-disclosure-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 0.8rem;
+            color: var(--text-secondary-grey);
+            line-height: 1.4;
+        }
+
+        .warning-highlight-text {
+            color: var(--accent-warning-amber);
+            font-weight: 600;
+        }
+
+        .legal-links-navigation {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .policy-hyperlink {
+            color: var(--accent-electric-cyan);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .policy-hyperlink:hover {
+            color: var(--accent-neon-green);
+            text-shadow: 0 0 5px var(--shadow-glow-green);
+        }
+
+        @media (max-width: 768px) {
+            .primary-content-wrapper {
+                padding: 1rem;
+                min-height: calc(100vh - 200px);
+            }
+
+            .main-headline-typography {
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .disclaimer-subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 2rem;
+            }
+
+            .circular-ai-portrait {
+                width: 120px;
+                height: 120px;
+            }
+
+            .ai-avatar-profile-container {
+                margin-bottom: 2rem;
+            }
+
+            .quantum-action-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .risk-disclosure-container {
+                font-size: 0.7rem;
+            }
+
+            .legal-compliance-footer {
+                padding: 1rem;
+            }
+        }
+
+        .floating-particles-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="cosmic-starfield-container">
+        <div class="floating-particles-background"></div>
+        <div class="neural-network-grid-overlay"></div>
+        
+        <div class="primary-content-wrapper">
+            <h1 class="main-headline-typography">
+               AI-assisted analysis
+            </h1>
+            
+            <p class="disclaimer-subtitle">
+                Data sourced from public data analysis and compilation, does not constitute investment advice.
+            </p>
+            
+            <div class="ai-avatar-profile-container">
+                <img src="img/1.jpg" 
+                     alt="AI Stock Analysis Expert" 
+                     class="circular-ai-portrait">
+            </div>
+            
+            <form class="interactive-form-module">
+                <input type="text" 
+                       class="neural-input-field" 
+                       placeholder="Enter stock symbol or company name (e.g., AAPL, Tesla)"
+                       id="stockInputField">
+                       
+                <button type="button" 
+                        class="quantum-action-button" 
+                        onclick="kmr()">
+                    Analyze Stock
+                </button>
+            </form>
+        </div>
+        
+        <div class="holographic-modal-overlay" id="analysisModal">
+            <div class="ai-processing-module">
+                <div class="analysis-status-text" id="statusText">
+                    AI system is combining: Market analysis, Latest news analysis, Historical data analysis
+                </div>
+                <div class="progress-visualization-bar">
+                    <div class="progress-energy-fill" id="progressBar"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="legal-compliance-footer">
+            <div class="risk-disclosure-container">
+                <div class="warning-highlight-text">⚠️ Important Risk Disclosure</div>
+                <p>This service provides general market information only and does not constitute any investment advice or recommendations. • Financial markets involve risks, and you may lose some or all of your investment principal. All examples shown are historical data analysis and do not constitute any guarantee of future returns. • Investors should make prudent decisions based on their own risk tolerance. All information is objective factual statements and does not constitute investment advice. • AI analysis tools only provide probability calculations based on historical data and algorithmic models, and do not constitute any form of investment advice. • Past performance does not represent future performance, and actual returns may be lower or higher than AI predictions.</p>
+                
+                <div class="legal-links-navigation">
+                    <a href="policy.html" class="policy-hyperlink" target="_blank">Privacy Policy</a>
+                    <a href="terms.html" class="policy-hyperlink" target="_blank">Terms of Service</a>
+					 <a href="Disclaimer.html" class="policy-hyperlink" target="_blank">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function kmr() {
+            const stockInput = document.getElementById('stockInputField');
+            if (!stockInput.value.trim()) {
+                // Create custom alert modal instead of using alert()
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+                modal.innerHTML = `
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-sm w-full mx-4">
+                        <p class="text-white mb-4">Please enter a stock symbol or company name</p>
+                        <div class="flex justify-end">
+                            <button class="px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 rounded" onclick="this.closest('.fixed').remove()">OK</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                return;
+            }
+            
+            const modal = document.getElementById('analysisModal');
+            const progressBar = document.getElementById('progressBar');
+            const statusText = document.getElementById('statusText');
+            
+            modal.style.display = 'flex';
+            
+            let progressPercentage = 0;
+            const progressInterval = setInterval(() => {
+                progressPercentage += 2;
+                progressBar.style.width = progressPercentage + '%';
+                
+                if (progressPercentage >= 100) {
+                    clearInterval(progressInterval);
+                    
+                    setTimeout(() => {
+                        statusText.innerHTML = `
+                            <div style="color: var(--accent-neon-green); font-size: 1.3rem; margin-bottom: 1rem;">
+                                ✓ Your stock analysis report is complete
+                            </div>
+                            <div style="color: var(--text-primary-white); margin-bottom: 1.5rem;">
+                                Click to jump to official WhatsApp account<br>
+                                Please click the link below to receive the report
+                            </div>
+                            <button onclick="redirectToWhatsApp()" style="
+                                background: linear-gradient(45deg, var(--accent-neon-green), var(--accent-electric-cyan));
+                                border: none;
+                                border-radius: 8px;
+                                color: white;
+                                padding: 12px 24px;
+                                font-size: 1rem;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+                            ">Get Report via WhatsApp</button>
+                        `;
+                        progressBar.parentElement.style.display = 'none';
+                    }, 500);
+                }
+            }, 20);
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('analysisModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+                // Reset modal state
+                document.getElementById('progressBar').style.width = '0%';
+                document.getElementById('statusText').textContent = 'AI system is combining: Market analysis, Latest news analysis, Historical data analysis';
+                document.querySelector('.progress-visualization-bar').style.display = 'block';
+            }
+        });
+        
+        // Dark mode support
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>
