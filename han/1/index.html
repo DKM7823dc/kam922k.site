@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 改为你谷歌像素 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-800640586"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-800640586');
+</script>
+
+<!-- 改为你谷歌事件 -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-800640586/ddNHCN-w9IAbEMqc4_0C',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+<script>
+ function ya2() {
+            closeCompletion();
+			gtag_report_conversion('https://www.qq.com'); 
+        }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>지능형 금융데이터 분석서비스</title>
+    <style>
+        :root {
+            --primary-color: #00f5ff;
+            --secondary-color: #ff6b35;
+            --accent-color: #7c3aed;
+            --warning-color: #fbbf24;
+            --background-primary: #0a0a1a;
+            --background-secondary: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3cc;
+            --grid-color: rgba(0, 245, 255, 0.1);
+            --border-color: rgba(255, 255, 255, 0.2);
+            --box-shadow: 0 8px 32px rgba(0, 245, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--background-secondary) 100%);
+            color: var(--text-primary);
+            font-family: 'Malgun Gothic', sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .background-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 245, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 245, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 1;
+            animation: grid-move 20s linear infinite;
+        }
+
+        @keyframes grid-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .star-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .star {
+            position: absolute;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        .star:nth-child(1) { top: 10%; left: 20%; width: 2px; height: 2px; animation-delay: 0s; }
+        .star:nth-child(2) { top: 25%; left: 80%; width: 1px; height: 1px; animation-delay: 1s; }
+        .star:nth-child(3) { top: 60%; left: 15%; width: 3px; height: 3px; animation-delay: 2s; }
+        .star:nth-child(4) { top: 80%; left: 70%; width: 2px; height: 2px; animation-delay: 0.5s; }
+        .star:nth-child(5) { top: 40%; left: 90%; width: 1px; height: 1px; animation-delay: 1.5s; }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .fixed-notification-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 107, 53, 0.95);
+            color: white;
+            text-align: center;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            padding-top: 60px;
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .primary-title {
+            font-size: clamp(28px, 8vw, 48px);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .statistics-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px 20px;
+            backdrop-filter: blur(10px);
+            min-width: 120px;
+        }
+
+        .stat-value {
+            color: var(--primary-color);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .service-description {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 30px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .input-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 500px;
+            backdrop-filter: blur(15px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .company-input-field {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .company-input-field:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        }
+
+        .company-input-field::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .analysis-button {
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--secondary-color), var(--warning-color));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: breathe 2s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
+            }
+            50% { 
+                transform: scale(1.02);
+                box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
+            }
+        }
+
+        .analysis-button:hover {
+            animation: none;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.6);
+        }
+
+        .analysis-button:active {
+            transform: translateY(0) scale(1);
+        }
+
+        .analysis-button::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.5s;
+            transform: rotate(45deg);
+        }
+
+        .analysis-button:hover::before {
+            animation: shine 0.7s ease-in-out;
+        }
+
+        @keyframes shine {
+            0% { transform: rotate(45deg) translate(-100%, -100%); }
+            50% { transform: rotate(45deg) translate(-50%, -50%); }
+            100% { transform: rotate(45deg) translate(100%, 100%); }
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+        }
+
+        .progress-modal {
+            background: var(--background-secondary);
+            border: 2px solid var(--primary-color);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 245, 255, 0.3);
+        }
+
+        .progress-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            width: 0%;
+            border-radius: 4px;
+            transition: width 0.1s ease;
+        }
+
+        .analysis-steps {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin: 15px 0;
+        }
+
+        .profile-image-container {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(0, 245, 255, 0.4);
+        }
+
+        .completion-section {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(124, 58, 237, 0.15);
+            border: 2px solid var(--accent-color);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            display: none;
+            z-index: 1500;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 60px rgba(124, 58, 237, 0.4);
+        }
+
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .close-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--text-primary);
+            transform: scale(1.1);
+        }
+
+        .completion-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            z-index: 1400;
+            backdrop-filter: blur(5px);
+        }
+
+        .completion-title {
+            color: var(--accent-color);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .completion-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .contact-button {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: breathe-button 2.5s ease-in-out infinite;
+        }
+
+        @keyframes breathe-button {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 5px 20px rgba(124, 58, 237, 0.3);
+            }
+            50% { 
+                transform: scale(1.03);
+                box-shadow: 0 8px 30px rgba(124, 58, 237, 0.5);
+            }
+        }
+
+        .contact-button:hover {
+            animation: none;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.6);
+        }
+
+        .risk-disclosure-section {
+            background: rgba(251, 191, 36, 0.05);
+            border-top: 3px solid var(--warning-color);
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        .risk-title {
+            color: var(--warning-color);
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .risk-list {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .risk-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .risk-item::before {
+            content: '*';
+            position: absolute;
+            left: 0;
+            color: var(--warning-color);
+            font-weight: bold;
+        }
+
+        .footer-links {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 20px;
+        }
+
+        .footer-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .fixed-notification-bar {
+                font-size: 11px;
+                padding: 6px 12px;
+            }
+            
+            .hero-section {
+                padding: 30px 15px;
+            }
+            
+            .statistics-container {
+                gap: 10px;
+            }
+            
+            .stat-item {
+                padding: 12px 16px;
+                min-width: 100px;
+            }
+            
+            .input-section {
+                margin: 30px 15px;
+                padding: 25px;
+            }
+            
+            .completion-section {
+                padding: 25px;
+                max-width: 95%;
+            }
+            
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .risk-disclosure-section {
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="background-grid"></div>
+        
+        <div class="star-field">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+
+        <div class="fixed-notification-bar">
+            【정보서비스】투자 조언 및 금융상품 거래 서비스를 제공하지 않으며, 투자 위험은 본인이 부담합니다.
+        </div>
+
+        <div class="content-wrapper">
+            <section class="hero-section">
+                <h1 class="primary-title">지능형 금융데이터 분석서비스</h1>
+                
+                <div class="profile-image-container">
+                    <img src="img/1.jpg" alt="전문가" class="profile-image">
+                </div>
+                
+                <div class="statistics-container">
+                    <div class="stat-item">
+                        <div class="stat-value">2초</div>
+                        <div class="stat-label">처리시간</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">23,918명</div>
+                        <div class="stat-label">사용자수</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">98.8%</div>
+                        <div class="stat-label">분석정확률</div>
+                    </div>
+                </div>
+
+                <p class="service-description">
+                    정보조회 | 데이터표시 | 참고자료제공<br>
+                    모든 데이터는 공개정보에서 수집되어 귀하의 연구결정에 효율적인 참고자료를 제공합니다.
+                </p>
+
+                <div class="input-section">
+                    <input type="text" class="company-input-field" placeholder="회사명 또는 주식코드를 입력하세요" id="companyInput">
+                    <button class="analysis-button" onclick="startAnalysis()">데이터 분석 시작</button>
+                </div>
+
+
+            </section>
+
+            <section class="risk-disclosure-section">
+                <h2 class="risk-title">⚠️ 중요 위험 안내</h2>
+                <div class="risk-list">
+                    <div class="risk-item">본 플랫폼은 정보 제공 목적으로만 운영되며, 금융상품 판매, 투자자문, 투자중개 서비스를 제공하지 않습니다.</div>
+                    <div class="risk-item">제공되는 모든 정보는 공개된 자료를 기반으로 한 참고자료이며, 투자 권유나 매매 신호로 해석되어서는 안 됩니다.</div>
+                    <div class="risk-item">투자에는 원금손실 위험이 있으며, 모든 투자 결정과 그에 따른 결과는 투자자 본인의 책임입니다.</div>
+                    <div class="risk-item">과거 데이터 및 분석 결과가 미래 수익을 보장하지 않으며, 시장 상황에 따라 예상과 다른 결과가 발생할 수 있습니다.</div>
+                    <div class="risk-item">당사는 정보의 정확성, 완전성, 적시성에 대해 보증하지 않으며, 정보 이용으로 인한 손실에 대해 책임지지 않습니다.</div>
+                    <div class="risk-item">투자 전 반드시 전문가와 상담하시고, 본인의 투자 목적과 위험 성향을 충분히 고려하시기 바랍니다.</div>
+                </div>
+                
+                <div class="footer-links">
+                    <a  class="footer-link" target="_blank">개인정보처리방침</a>
+                    <a  class="footer-link" target="_blank">이용약관</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="completion-overlay" id="completionOverlay"></div>
+        <div class="completion-section" id="completionSection">
+            <div class="close-button" onclick="closeCompletion()">×</div>
+            <h3 class="completion-title">정보 분석이 완료되었습니다.</h3>
+            <p class="completion-description">
+                상세한 재무정보 데이터를 확인하시려면 전용 고객서비스에 문의하세요.<br>
+                명확하고 이해하기 쉬운 공개정보를 제공해드립니다.
+            </p>
+            <button class="contact-button" onclick="ya2()">즉시 보고서를 받으세요</button>
+        </div>
+
+        <div class="modal-overlay" id="progressModal">
+            <div class="progress-modal">
+                <h3 class="progress-title">AI 시스템 분석 중...</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+                <div class="analysis-steps" id="analysisSteps">
+                    시장 분석 중...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function startAnalysis() {
+            const inputValue = document.getElementById('companyInput').value.trim();
+            if (!inputValue) {
+                showCustomAlert('회사명 또는 주식코드를 입력해주세요.');
+                return;
+            }
+
+            const progressModal = document.getElementById('progressModal');
+            const progressBar = document.getElementById('progressBar');
+            const analysisSteps = document.getElementById('analysisSteps');
+            const completionSection = document.getElementById('completionSection');
+
+            progressModal.style.display = 'flex';
+            
+            const steps = [
+                '시장 분석 중...',
+                '최신 뉴스 분석 중...',
+                '과거 데이터 분석 중...',
+                '분석 완료!'
+            ];
+            
+            let currentStep = 0;
+            let progress = 0;
+            
+            const progressInterval = setInterval(() => {
+                progress += Math.random() * 30;
+                if (progress > 100) progress = 100;
+                
+                progressBar.style.width = progress + '%';
+                
+                if (progress > currentStep * 25 && currentStep < steps.length - 1) {
+                    currentStep++;
+                    analysisSteps.textContent = steps[currentStep];
+                }
+                
+                if (progress >= 100) {
+                    clearInterval(progressInterval);
+                    setTimeout(() => {
+                        progressModal.style.display = 'none';
+                        document.getElementById('completionOverlay').style.display = 'block';
+                        completionSection.style.display = 'block';
+                    }, 500);
+                }
+            }, 100);
+        }
+
+       
+
+        function closeCompletion() {
+            document.getElementById('completionOverlay').style.display = 'none';
+            document.getElementById('completionSection').style.display = 'none';
+        }
+
+        function showCustomAlert(message) {
+            const alertModal = document.createElement('div');
+            alertModal.className = 'modal-overlay';
+            alertModal.style.display = 'flex';
+            alertModal.innerHTML = `
+                <div class="progress-modal" style="max-width: 300px;">
+                    <h3 class="progress-title">알림</h3>
+                    <p style="color: var(--text-secondary); margin: 20px 0;">${message}</p>
+                    <button class="contact-button" onclick="this.closest('.modal-overlay').remove()" style="width: 100%;">확인</button>
+                </div>
+            `;
+            document.body.appendChild(alertModal);
+            
+            setTimeout(() => {
+                alertModal.remove();
+            }, 3000);
+        }
+
+        // 터치 이벤트 최적화
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                button.addEventListener('touchend', function() {
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 100);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
