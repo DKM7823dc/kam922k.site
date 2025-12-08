@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>박순혁 투자 커뮤니티 - 무료 주식 투자 가이드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                        gold: '#FFD700',
+                        success: '#10B981',
+                        danger: '#EF4444'
+                    },
+                    fontFamily: {
+                        'korean': ['Noto Sans KR', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .breathing-animation {
+            animation: breathe 2s ease-in-out infinite;
+        }
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .floating-btn {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            padding: 20px;
+        }
+        @media (min-width: 768px) {
+            .floating-btn {
+                bottom: 20px;
+                right: 20px;
+                left: auto;
+                padding: 0;
+                animation: bounce 2s infinite;
+            }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(90deg, #FFD700, #FF6B35, #FFD700);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Header Section -->
+    <div class="gradient-bg min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <div class="mb-8">
+                <img src="img/400772132_661159676134457_4682173038994312551_n.jpg" 
+                     alt="박순혁" 
+                     class="w-80 h-auto md:w-96 mx-auto border-4 border-gold shadow-2xl mb-6 rounded-lg">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black mb-6 text-shadow">
+                <span class="text-gold">박순혁</span> 투자 커뮤니티
+            </h1>
+            <div class="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed mb-8 bg-black bg-opacity-50 p-6 rounded-lg">
+                <p class="mb-4">안녕하세요, 저는 한국 출신의 경제학자 박순혁입니다. 한국의 1인당 소득은 높지만, 잘 알려진 바와 같이 빈부격차가 확대되고 있습니다. 이념적 제약으로 인해 일반 시민들의 지출이 급증하여 직장인, 특히 젊은 세대에게 큰 압박을 주고 있습니다.</p>
+                <p class="text-gold font-bold text-2xl">그래서 저는 주식 투자를 배우기 시작했고, 단 2년 만에 전문 투자자가 되어 300억원을 벌었습니다</p>
+            </div>
+           
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Warning Section -->
+    <div class="bg-gradient-to-r from-red-600 to-red-800 py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="img/422570058_268236739459905_6670340029314027140_n.png" 
+                         alt="경고" 
+                         class="w-full rounded-lg shadow-2xl">
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-black mb-6 text-yellow-300">⚠️ 특별 공지</h2>
+                    <div class="text-lg md:text-xl leading-relaxed space-y-4">
+                        <p class="bg-yellow-400 text-black p-4 rounded-lg font-bold">특별 알림: 가입 후 유료 구독을 요구하는 모든 그룹은 사기입니다.</p>
+                        <p>저는 주식을 사랑하는 친구들에게 무료 가이드를 제공하기 위해 이 그룹을 만들었습니다.</p>
+                        <p>어떤 투자를 하든 경제학과 그 동향에 대한 기본적인 이해가 매우 중요합니다. 우리는 자본주의 사회에 살고 있으며, 재무 관리 학습은 선택이 아닌 필수라고 생각합니다.</p>
+                        <p class="text-gold font-bold">주식 투자 수익은 열심히 일해서 받는 월급보다 수십 배, 심지어 수백 배 높을 수 있습니다.</p>
+                    </div>
+                    <div class="mt-6">
+                        <img src="img/band.png" 
+                             alt="밴드 가입" 
+                             class="mx-auto md:mx-0 cursor-pointer breathing-animation"
+                             onclick="r2()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Vision Section -->
+    <div class="bg-gradient-to-r from-blue-900 to-purple-900 py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl md:text-4xl font-black mb-6 text-center md:text-left">🇰🇷 대한민국의 미래</h2>
+                    <div class="text-lg md:text-xl leading-relaxed space-y-4">
+                        <p>이제 저의 방법을 무료로 공유하고, 주식 투자 방법을 단계별로 가르쳐드리기로 결정했습니다.</p>
+                        <p class="text-gold font-bold text-2xl">대한민국의 모든 국민이 주식 투자를 통해 수익을 창출하고, 금융 시장을 활성화하며, 국민의 행복을 증진시키기를 바랍니다.</p>
+                        <p class="bg-green-600 p-4 rounded-lg font-bold">성공률 99%에 달하는 주식 투자 방법을 여러분과 공유하겠습니다.</p>
+                        <p class="text-red-300">여러분은 아무것도 잃을 것이 없지만, 이 기회를 놓치면 큰 손실을 입을 수 있습니다.</p>
+                    </div>
+                    <div class="mt-6">
+                        <img src="img/band.png" 
+                             alt="밴드 가입" 
+                             class="mx-auto md:mx-0 cursor-pointer breathing-animation"
+                             onclick="r2()">
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="img/395916371_718170979671128_3804298530893251680_n.jpg" 
+                         alt="투자 성공" 
+                         class="w-full rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- CTA Section -->
+    <div class="bg-gradient-to-r from-green-600 to-blue-600 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-black mb-8 text-shadow">🎯 지금 바로 시작하세요!</h2>
+                <div class="bg-black bg-opacity-50 p-8 rounded-lg mb-8">
+                    <p class="text-xl md:text-2xl leading-relaxed mb-4">⚠️ 아래 버튼을 클릭하여 제 커뮤니티에 가입하고 숫자 "9"를 보내주세요. 상승이 예상되는 3개 주식을 공유해드리겠습니다.</p>
+                    <p class="text-gold font-bold text-lg">오늘 가입하는 첫 300명의 투자자는 저희 투자 커뮤니티 VIP 회원이 될 기회를 얻으며, 모든 회원은 1:1 상담 서비스를 받습니다</p>
+                </div>
+                <img src="img/band.png" 
+                     alt="밴드 가입" 
+                     class="mx-auto cursor-pointer breathing-animation"
+                     onclick="r2()">
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Success Stories -->
+    <div class="bg-gradient-to-r from-purple-900 to-red-900 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-12 text-shadow">💰 멤버 수익 현황</h2>
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="bg-black bg-opacity-50 p-8 rounded-lg mb-8">
+                    <p class="text-lg md:text-xl leading-relaxed mb-4">주식을 사랑하는 친구들에게 무료 가이드를 제공하는 그룹을 만들었습니다. 🔥</p>
+                    <p class="text-gold font-bold text-xl mb-4">일부 회원들은 단 일주일 만에 천만원에서 수억원의 수익을 올렸습니다.</p>
+                    <p class="text-green-400 font-bold text-2xl mb-4">지난달 말까지 제 회원 중 절반 이상이 40%의 주간 수익을 실현했으며, 전체 회원의 평균 주간 복합 수익률은 36%입니다. 🔥</p>
+                    <p class="text-yellow-300 font-bold text-xl mb-4">지난주 제가 추천한 주식은 45% 상승했는데, 마치 보물을 발견한 것 같았습니다.</p>
+                    <p class="text-lg">주식을 통해 조기 은퇴할 수 있다고 믿으시나요? 많은 사람들이 믿지 않을 수도 있지만, 이것은 사실이며, 저는 이렇게 부를 축적했습니다. 🔥</p>
+                    <p class="text-lg font-bold mt-4">38,000명 이상이 무료 혜택을 받았으며, 참여 인원은 제한적입니다. 🔥</p>
+                    <p class="text-lg font-bold">100억원 추가 성장 계획을 확보하고, 2025년 첫 번째 부의 열차에 탑승하세요.</p>
+                </div>
+                <img src="img/band.png" 
+                     alt="밴드 가입" 
+                     class="mx-auto cursor-pointer breathing-animation"
+                     onclick="r2()">
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Team Section -->
+    <div class="bg-gradient-to-r from-indigo-900 to-purple-900 py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="img/396716373_899991410956956_3828563606213424111_n.jpg" 
+                         alt="투자팀" 
+                         class="w-full rounded-lg shadow-2xl">
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-black mb-6">👥 전문 투자팀</h2>
+                    <div class="text-lg md:text-xl leading-relaxed space-y-4">
+                        <p>저는 현재 투자 그룹에서 일하고 있어 일정이 바쁩니다. 저희에게 가입하여 저를 여러분의 어시스턴트로 추가해 주세요.</p>
+                        <p class="text-gold font-bold">신규 회원 가입 시 무료로 우량주 3개를 선물로 받습니다.</p>
+                        <p>매일 그룹 채팅을 통해 회원들과 소통할 수 있으니 적극적으로 참여해 주세요.</p>
+                        <div class="bg-red-600 p-4 rounded-lg">
+                            <p class="font-bold">⚠️ 여러분과의 협력을 기대합니다. 아래 버튼을 클릭하여 그룹에 가입하세요! "9"를 보내면 8월에 크게 오를 3개 주식을 보내드립니다. 오늘 저희 투자 커뮤니티에 가입하는 첫 300명의 투자자는 VIP 회원이 될 수 있으며, 각 투자자는 1:1 상담 기회를 얻습니다.</p>
+                        </div>
+                        <p class="text-yellow-300">가입 후 유료 구독을 요구하는 모든 회사는 사기입니다.</p>
+                    </div>
+                    <div class="mt-6">
+                        <img src="img/band.png" 
+                             alt="밴드 가입" 
+                             class="mx-auto md:mx-0 cursor-pointer breathing-animation"
+                             onclick="r2()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+  
+
+    <div class="section-divider"></div>
+
+    <!-- Benefits Section -->
+    <div class="bg-gradient-to-r from-teal-900 to-blue-900 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-12 text-shadow">🎁 무엇을 얻을 수 있나요?</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <img src="img/ebd01cd9-7e87-4b2a-ba55-a9a4673af8b8.jpg" 
+                         alt="혜택1" 
+                         class="w-full rounded-lg shadow-2xl mb-4">
+                </div>
+                <div class="text-center">
+                    <img src="img/d8d77f83-1a49-4bee-967b-1608ce7fb479.jpg" 
+                         alt="혜택2" 
+                         class="w-full rounded-lg shadow-2xl mb-4">
+                </div>
+                <div class="text-center">
+                    <img src="img/396547277_6716173948431413_6742324544520392332_n.jpg" 
+                         alt="혜택3" 
+                         class="w-full rounded-lg shadow-2xl mb-4">
+                </div>
+            </div>
+            <div class="text-center">
+                <img src="img/band.png" 
+                     alt="밴드 가입" 
+                     class="mx-auto cursor-pointer breathing-animation"
+                     onclick="r2()">
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Final CTA Section -->
+    <div class="bg-gradient-to-r from-red-900 to-purple-900 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-shadow">🚀 박순혁 투자 커뮤니티에 즉시 무료 가입</h2>
+                <div class="bg-black bg-opacity-50 p-8 rounded-lg mb-8">
+                    <h3 class="text-2xl font-bold mb-6 text-gold">주식시장에 대한 핵심 통찰을 공유하고 싶습니다:</h3>
+                    <div class="text-left text-lg leading-relaxed space-y-3">
+                        <p><span class="text-red-400 font-bold">1.</span> 시장 변동성이 심해 더 이상 인내심을 갖고 연구하고 기다릴 시간이 없습니다.</p>
+                        <p><span class="text-red-400 font-bold">2.</span> 정보 부족이 문제입니다. 많은 사람들이 정확한 시장 정보가 부족하여 현명한 결정을 내리기 어렵습니다.</p>
+                        <p><span class="text-red-400 font-bold">3.</span> 심리적 압박이 투자 결정에 영향을 줍니다. 탐욕과 두려움이 종종 올바른 결정을 내리는 것을 방해합니다.</p>
+                        <p><span class="text-red-400 font-bold">4.</span> 위험 관리가 투자의 핵심입니다. 레버리지를 부적절하게 사용하면 더 큰 손실로 이어질 수 있습니다.</p>
+                    </div>
+                    <div class="mt-6 p-4 bg-green-600 rounded-lg">
+                        <p class="font-bold">⚠️ 저희는 여러분에게 가치 있는 정보와 자원을 제공할 것을 약속합니다. 아래 버튼을 클릭하여 저희 밴드에 가입하세요! "9"를 보내면 8월에 급등할 3개 주식을 보내드립니다. 오늘 저희 투자 커뮤니티에 VIP 회원으로 가입하는 첫 300명의 투자자는 각자 1:1 상담을 받을 수 있습니다.</p>
+                    </div>
+                </div>
+                <img src="img/band.png" 
+                     alt="밴드 가입" 
+                     class="mx-auto cursor-pointer breathing-animation"
+                     onclick="r2()">
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Testimonials -->
+    <div class="bg-gradient-to-r from-green-900 to-teal-900 py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="img/say.jpeg" 
+                         alt="후기" 
+                         class="w-full rounded-lg shadow-2xl">
+                </div>
+                <div>
+                    <img src="img/gupiao.png" 
+                         alt="주식 차트" 
+                         class="w-full rounded-lg shadow-2xl">
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <img src="img/band.png" 
+                     alt="밴드 가입" 
+                     class="mx-auto cursor-pointer breathing-animation"
+                     onclick="r2()">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-4">
+            <!-- Risk Disclosure -->
+            <div class="mb-8 p-6 bg-yellow-900 bg-opacity-30 border border-yellow-500 rounded-lg">
+                <h3 class="text-xl font-bold mb-4 text-yellow-400">⚠️ 중요한 위험 고지사항</h3>
+                <div class="text-sm leading-relaxed space-y-2 text-gray-300">
+                    <p>• 주식 투자는 원금 손실의 위험을 포함한 높은 위험을 수반합니다.</p>
+                    <p>• 과거 수익률이 미래 수익률을 보장하지 않습니다.</p>
+                    <p>• 모든 투자 결정은 개인의 책임하에 이루어져야 합니다.</p>
+                    <p>• 투자 전 충분한 정보 검토와 전문가 상담을 권장합니다.</p>
+                    <p>• 본 서비스는 투자 조언이 아닌 교육 목적의 정보 제공입니다.</p>
+                    <p>• 어떠한 경우에도 투자금 지급을 요구하지 않습니다.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-gold">서비스 정보</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>• 무료 투자 교육 커뮤니티</li>
+                        <li>• 주식 시장 분석 정보</li>
+                        <li>• 투자 전략 가이드</li>
+                        <li>• 멤버간 정보 교류</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-gold">법적 고지</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">이용약관</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">개인정보처리방침</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">면책조항</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">투자위험고지</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-gold">연락처</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>• 커뮤니티 운영진</li>
+                        <li>• 문의사항 접수</li>
+                        <li>• 신고 및 제보</li>
+                        <li>• 기술적 문제</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-500">
+                <p class="mb-2">© 2024 박순혁 투자 커뮤니티. All rights reserved.</p>
+                <p class="mb-2">본 사이트는 투자 교육 목적으로 운영되며, 모든 투자 결정에 대한 책임은 개인에게 있습니다.</p>
+                <p>Google 금융 광고 정책 및 관련 법규를 준수합니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Button -->
+    <div class="floating-btn">
+        <img src="img/band.png" 
+             alt="밴드 가입" 
+             class="w-full h-auto md:w-48 md:h-auto cursor-pointer breathing-animation"
+             onclick="r2()">
+    </div>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // CTA Function
+        function r2() {
+            // Redirect to band link - replace with actual band URL
+            window.open('https://band.us/', '_blank');
+        }
+
+        // Smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
